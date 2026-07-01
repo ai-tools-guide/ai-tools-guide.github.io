@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Tools Guide — Guía Gratuita de Herramientas IA</title>
+<meta name="description" content="Guía gratuita con 130+ herramientas de IA organizadas en 12 categorías. Disponible en 14 idiomas. Asistentes, video, imágenes, código, audio y más.">
+<meta name="author" content="BRUNI">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai-tools-guide.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-tools-guide.github.io/">
+<meta property="og:title" content="AI Tools Guide — 130+ Herramientas IA Gratis">
+<meta property="og:description" content="Directorio gratuito con 130+ herramientas de inteligencia artificial en 12 categorías y 14 idiomas.">
+<meta property="og:image" content="https://ai-tools-guide.github.io/favicon-512.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://ai-tools-guide.github.io/">
+<meta name="twitter:title" content="AI Tools Guide — 130+ Herramientas IA Gratis">
+<meta name="twitter:description" content="Directorio gratuito con 130+ herramientas de inteligencia artificial en 12 categorías y 14 idiomas.">
+<meta name="twitter:image" content="https://ai-tools-guide.github.io/favicon-512.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1A1400">
+<!-- ═══════════════════════════════════════════════════════════════
+  TIPOGRAFÍA ÚNICA: Inter — moderna, legible, versátil.
+  Reemplaza Playfair Display + DM Sans + DM Mono por una sola familia
+  con pesos variables: 300(light) 400(regular) 500(medium) 600(semibold)
+  700(bold) 800(extrabold) 900(black) + Italic.
+  Inter tiene excelente soporte para todos los 14 idiomas del selector.
+═══════════════════════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,700;1,14..32,900&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════
+   DESIGN TOKENS
+══════════════════════════════════════════════════ */
+:root{
+  --A-acc:#C8A800;--A-dk:#5A4A00;
+  --B-acc:#D4720A;--B-dk:#5A2800;
+  --C-acc:#C43020;--C-dk:#5A0A00;
+  --D-acc:#C45030;--D-dk:#5A1800;
+  --E-acc:#B04070;--E-dk:#5A0030;
+  --F-acc:#C04060;--F-dk:#5A0020;
+  --G-acc:#904090;--G-dk:#3A0040;
+  --H-acc:#7040A0;--H-dk:#280050;
+  --I-acc:#2060A0;--I-dk:#001840;
+  --J-acc:#208070;--J-dk:#003030;
+  --K-acc:#208040;--K-dk:#003010;
+  --L-acc:#608030;--L-dk:#203000;
+  --brand-yellow:#F5C800;
+  --font:'Inter',system-ui,sans-serif;
+  --tr:.2s cubic-bezier(.4,0,.2,1);
+  --r:12px;--r-sm:8px;
+}
+[data-theme="dark"]{
+  --bg:#1A1400;--bg2:#231C00;--bg3:#2E2500;
+  --surface:#2A2100;
+  --border:rgba(245,200,0,.16);--border2:rgba(245,200,0,.09);
+  --text:#FFFFFF;--text2:rgba(255,255,255,.82);--text3:rgba(255,255,255,.50);
+  --yellow:#F5C800;
+  --topbar-bg:rgba(20,15,0,.96);
+  --shadow:0 4px 24px rgba(0,0,0,.45);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.55);
+}
+[data-theme="light"]{
+  --bg:#FAFAF5;--bg2:#F4F2E8;--bg3:#EAE8DC;
+  --surface:#FFFFFF;
+  --border:rgba(61,48,0,.14);--border2:rgba(61,48,0,.08);
+  --text:#1A1400;--text2:#3A3000;--text3:#7A6A00;
+  --yellow:#C8A800;
+  --topbar-bg:rgba(250,250,245,.96);
+  --shadow:0 4px 24px rgba(0,0,0,.09);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.14);
+}
+
+/* ══════════════════════════════════════════════════
+   RESET & BASE — single font family
+══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:var(--font);
+  background:var(--bg);color:var(--text);
+  min-height:100vh;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  transition:background var(--tr),color var(--tr);
+}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:4px}
+
+/* ══════════════════════════════════════════════════
+   TOPBAR
+══════════════════════════════════════════════════ */
+.topbar{
+  position:sticky;top:0;z-index:300;
+  background:var(--topbar-bg);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;
+  height:52px;padding:0 18px;gap:0;
+}
+.tb-logo{display:flex;align-items:center;gap:8px;cursor:pointer;flex-shrink:0}
+.tb-mark{
+  width:30px;height:30px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;overflow:hidden;transition:var(--tr);
+}
+.tb-mark img{width:30px;height:30px;object-fit:cover;display:block}
+.tb-mark:hover{opacity:.85}
+.tb-logotxt{
+  font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:-.3px;
+  color:#fff;white-space:nowrap;
+  text-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+[data-theme="light"] .tb-logotxt{color:var(--text);text-shadow:none}
+.tb-sep{width:1px;height:20px;background:var(--border);margin:0 10px;flex-shrink:0}
+
+/* ── CENTER ZONE (mutates: search ↔ category tabs) ── */
+.tb-center{flex:1;min-width:0;display:flex;align-items:center;justify-content:center}
+/* Default: Home state visible, Category state hidden */
+.topbar[data-view="category"] .tb-center-search{display:none}
+.topbar[data-view="category"] .tb-cats{display:flex}
+.topbar[data-view="home"] .tb-center-search{display:flex}
+.topbar[data-view="home"] .tb-cats{display:none}
+
+/* State A: search bar centered in topbar (Home view) */
+.tb-center-search{
+  display:flex;align-items:center;gap:8px;
+  width:100%;max-width:560px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  border-radius:8px;padding:0 4px 0 12px;height:34px;
+  transition:var(--tr);
+}
+[data-theme="light"] .tb-center-search{background:var(--bg2);border-color:var(--border)}
+.tb-center-search:focus-within{border-color:var(--yellow)}
+.tb-center-search svg{stroke:rgba(255,255,255,.5);flex-shrink:0}
+[data-theme="light"] .tb-center-search svg{stroke:var(--text3)}
+.tb-search-input{
+  flex:1;border:none;outline:none;background:transparent;
+  font-family:var(--font);font-size:12.5px;color:#fff;min-width:0;
+}
+[data-theme="light"] .tb-search-input{color:var(--text)}
+.tb-search-input::placeholder{color:rgba(255,255,255,.45)}
+[data-theme="light"] .tb-search-input::placeholder{color:var(--text3)}
+.tb-search-go{
+  background:var(--yellow);color:var(--bg);border:none;
+  height:26px;padding:0 12px;border-radius:6px;
+  font-family:var(--font);font-size:10.5px;font-weight:700;
+  cursor:pointer;transition:opacity var(--tr);flex-shrink:0;white-space:nowrap;
+}
+.tb-search-go:hover{opacity:.88}
+
+/* State B: scrollable category tabs (Category/Detail view) */
+.tb-cats{display:none;align-items:center;gap:1px;overflow-x:auto;width:100%;scrollbar-width:none}
+.tb-cats::-webkit-scrollbar{display:none}
+.tb-cat{
+  display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:6px;
+  cursor:pointer;font-size:10.5px;font-weight:500;
+  color:rgba(255,255,255,.65);white-space:nowrap;transition:var(--tr);
+  border:1px solid transparent;flex-shrink:0;
+}
+[data-theme="light"] .tb-cat{color:rgba(26,20,0,.55)}
+.tb-cat:hover{background:rgba(255,255,255,.1);color:#fff}
+[data-theme="light"] .tb-cat:hover{background:var(--bg2);color:var(--text)}
+.tb-cat.active{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.18)}
+[data-theme="light"] .tb-cat.active{background:var(--text);color:#fff}
+.tb-cat-ico{width:14px;height:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.tb-cat-ico svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tb-right{display:flex;align-items:center;gap:6px;margin-left:8px;flex-shrink:0}
+
+.tb-count{
+  background:rgba(255,255,255,.07);border-radius:5px;padding:3px 8px;
+  font-size:10px;font-weight:500;color:rgba(255,255,255,.55);white-space:nowrap;
+}
+[data-theme="light"] .tb-count{background:var(--bg3);color:var(--text3)}
+
+/* ── LANGUAGE DROPDOWN (14 idiomas) ── */
+.lang-wrap{position:relative;flex-shrink:0}
+.lang-current{
+  display:flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);
+  border-radius:6px;padding:4px 10px;cursor:pointer;
+  font-size:11px;font-weight:600;color:rgba(255,255,255,.85);
+  transition:var(--tr);white-space:nowrap;min-width:54px;
+  font-family:var(--font);
+}
+[data-theme="light"] .lang-current{background:var(--bg2);border-color:var(--border);color:var(--text2)}
+.lang-current:hover{background:rgba(255,255,255,.18)}
+.lang-current svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2;margin-left:2px;transition:transform .2s}
+.lang-current.open svg{transform:rotate(180deg)}
+.lang-dropdown{
+  position:absolute;top:calc(100% + 6px);right:0;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:5px;min-width:200px;
+  box-shadow:var(--shadow-lg);z-index:400;
+  display:none;flex-direction:column;gap:1px;
+  animation:fadeUp .15s ease;
+}
+.lang-dropdown.open{display:flex}
+@keyframes fadeUp{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.lang-opt{
+  display:flex;align-items:center;gap:9px;
+  padding:8px 10px;border-radius:7px;cursor:pointer;
+  font-size:12px;font-weight:400;color:var(--text2);
+  transition:var(--tr);
+}
+.lang-opt:hover{background:var(--bg2);color:var(--text)}
+.lang-opt.active{background:var(--yellow);color:var(--bg);font-weight:600}
+.lang-flag{font-size:16px;flex-shrink:0;width:20px;text-align:center}
+.lang-native{font-size:10px;color:var(--text3);margin-left:auto}
+.lang-opt.active .lang-native{color:rgba(0,0,0,.5)}
+
+/* Theme toggle */
+.theme-btn{
+  width:28px;height:28px;border-radius:6px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:13px;transition:var(--tr);
+}
+[data-theme="light"] .theme-btn{background:var(--bg2);border-color:var(--border)}
+.theme-btn:hover{background:rgba(255,255,255,.18)}
+
+/* ══════════════════════════════════════════════════
+   SWATCH STRIP
+══════════════════════════════════════════════════ */
+.swatch{display:flex;height:5px}
+.swatch span{flex:1}
+
+/* ══════════════════════════════════════════════════
+   SEARCH OVERLAY
+══════════════════════════════════════════════════ */
+.search-overlay{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.72);backdrop-filter:blur(10px);
+  align-items:flex-start;justify-content:center;padding-top:68px;
+}
+.search-overlay.open{display:flex}
+.search-box{
+  background:var(--surface);border-radius:14px;
+  width:100%;max-width:580px;overflow:hidden;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border);
+}
+.search-inner{
+  display:flex;align-items:center;gap:10px;
+  padding:13px 16px;border-bottom:1px solid var(--border);
+}
+.search-ico{font-size:15px;color:var(--text3)}
+.search-field{
+  flex:1;border:none;outline:none;
+  font-family:var(--font);font-size:14px;
+  color:var(--text);background:transparent;
+}
+.search-field::placeholder{color:var(--text3)}
+.search-esc{
+  background:var(--bg2);border:1px solid var(--border);border-radius:4px;
+  padding:2px 6px;font-size:9px;color:var(--text3);
+  cursor:pointer;font-family:var(--font);font-weight:600;
+}
+.search-results{max-height:400px;overflow-y:auto;padding:8px}
+.sr-lbl{font-size:9px;font-weight:600;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;padding:8px 8px 5px}
+.sr-mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:5px;padding-bottom:5px}
+.sr-empty{padding:36px;text-align:center;color:var(--text3);font-size:13px}
+.empty{padding:64px 20px;text-align:center;color:var(--text3);font-size:14px}
+.empty-ico{display:block;font-size:34px;margin-bottom:12px;opacity:.5}
+
+/* ══════════════════════════════════════════════════
+   HOME — HERO
+══════════════════════════════════════════════════ */
+.hero{
+  max-width:1140px;margin:0 auto;
+  padding:48px 28px 32px;
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:36px;
+}
+.hero-title{
+  font-family:var(--font);
+  font-size:clamp(42px,7vw,84px);
+  font-weight:900;line-height:.92;letter-spacing:-.04em;
+  color:var(--text);margin-bottom:14px;
+  font-style:italic;
+}
+.hero-title .yl{
+  display:inline-block;background:var(--yellow);color:var(--bg);
+  padding:2px 14px 4px;font-style:italic;transform:skewX(-1.5deg);
+}
+.hero-tagline{font-size:15px;color:var(--text2);line-height:1.7;max-width:480px;margin-bottom:0;font-weight:400}
+.hero-stats{display:flex;flex-direction:column;gap:10px;align-items:flex-end;flex-shrink:0}
+.hero-stat-n{font-family:var(--font);font-size:36px;font-weight:800;line-height:1;color:var(--yellow);display:block}
+.hero-stat-l{font-size:9.5px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;font-weight:500}
+
+/* Hero search */
+.hero-search{max-width:1140px;margin:0 auto;padding:0 28px 32px}
+.hero-search-inner{
+  display:flex;gap:0;background:var(--surface);
+  border:1.5px solid var(--border);border-radius:11px;overflow:hidden;
+  box-shadow:var(--shadow);transition:box-shadow var(--tr),border-color var(--tr);
+}
+.hero-search-inner:focus-within{border-color:var(--yellow);box-shadow:0 4px 24px rgba(245,200,0,.14)}
+.hero-search-input{
+  flex:1;border:none;outline:none;padding:12px 16px;
+  font-family:var(--font);font-size:14px;color:var(--text);background:transparent;
+}
+.hero-search-input::placeholder{color:var(--text3)}
+.hero-search-btn{
+  background:var(--yellow);color:var(--bg);border:none;
+  padding:0 20px;font-family:var(--font);font-size:12.5px;font-weight:700;
+  cursor:pointer;transition:opacity var(--tr);display:flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.hero-search-btn:hover{opacity:.88}
+
+/* ══════════════════════════════════════════════════
+   CONTENT
+══════════════════════════════════════════════════ */
+.content{max-width:1140px;margin:0 auto;padding:0 28px 80px}
+.sec-label{
+  font-size:10px;font-weight:600;color:var(--text3);
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;
+}
+
+/* ══════════════════════════════════════════════════
+   HOME — CATEGORY GRID
+══════════════════════════════════════════════════ */
+.home-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(196px,1fr));
+  gap:11px;margin-bottom:48px;
+}
+.cat-block{
+  position:relative;overflow:hidden;border-radius:14px;cursor:pointer;
+  aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:16px;transition:transform var(--tr),box-shadow var(--tr);
+  border:1.5px solid transparent;
+}
+.cat-block:hover{transform:translateY(-4px) scale(1.01);box-shadow:var(--shadow-lg);border-color:rgba(255,255,255,.18)}
+.cat-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity var(--tr)}
+.cat-block:hover::before{opacity:1;background:rgba(255,255,255,.35)}
+.cat-block-letter{
+  position:absolute;top:-10px;right:-8px;
+  font-family:var(--font);font-size:110px;font-weight:900;
+  color:rgba(255,255,255,.07);line-height:1;pointer-events:none;user-select:none;
+}
+.cat-block-icon{
+  position:absolute;top:14px;left:14px;
+  width:42px;height:42px;border-radius:9px;
+  background:rgba(255,255,255,.18);
+  display:flex;align-items:center;justify-content:center;
+}
+.cat-block-icon svg{width:22px;height:22px;stroke:white;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cat-block-thumbs{display:flex;gap:4px;align-items:center;margin-bottom:10px}
+.cat-thumb{
+  width:20px;height:20px;border-radius:4px;overflow:hidden;
+  background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;border:1px solid rgba(255,255,255,.18);
+}
+.cat-thumb img{width:100%;height:100%;object-fit:contain;padding:2px;border-radius:3px}
+.cat-thumb-fb{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font);font-size:6px;font-weight:700;color:white;border-radius:3px;
+}
+.cat-more{font-size:8.5px;color:rgba(255,255,255,.7);margin-left:1px}
+.cat-block-name{font-family:var(--font);font-size:13.5px;font-weight:700;color:white;line-height:1.15;margin-bottom:2px}
+.cat-block-sub{font-size:9.5px;color:rgba(255,255,255,.6);line-height:1.4}
+.cat-block-count{
+  display:inline-block;margin-top:6px;
+  background:rgba(0,0,0,.25);border-radius:20px;padding:2px 8px;
+  font-size:9px;font-weight:500;color:rgba(255,255,255,.85);
+}
+
+/* ══════════════════════════════════════════════════
+   FEATURED STRIP
+══════════════════════════════════════════════════ */
+.feat-strip{margin-bottom:0}
+.feat-scroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none}
+.feat-scroll::-webkit-scrollbar{display:none}
+.feat-chip{
+  display:flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;padding:7px 11px;cursor:pointer;
+  transition:var(--tr);flex-shrink:0;
+}
+.feat-chip:hover{border-color:var(--text3);box-shadow:var(--shadow);transform:translateY(-1px)}
+.feat-chip-logo{
+  width:22px;height:22px;border-radius:5px;overflow:hidden;
+  background:var(--bg2);display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);flex-shrink:0;
+}
+.feat-chip-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
+.feat-chip-logo-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff;border-radius:4px}
+.feat-chip-name{font-size:11.5px;font-weight:500;white-space:nowrap;color:var(--text)}
+
+/* ══════════════════════════════════════════════════
+   CATEGORY DETAIL VIEW
+══════════════════════════════════════════════════ */
+#dirView{display:none}
+.dir-header{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:24px;flex-wrap:wrap;padding-top:24px;
+}
+.dir-back{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:6px;padding:6px 12px;font-family:var(--font);
+  font-size:11.5px;color:var(--text2);cursor:pointer;
+  display:flex;align-items:center;gap:4px;transition:var(--tr);
+}
+.dir-back:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+.dir-cat-icon{
+  width:36px;height:36px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.dir-cat-icon svg{width:20px;height:20px;stroke:white;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dir-cat-name{font-family:var(--font);font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--text)}
+.dir-cat-sub{font-size:11px;color:var(--text3);margin-top:3px;font-weight:400}
+.dir-badge{margin-left:auto;background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:3px 11px;font-size:10.5px;color:var(--text2)}
+.dir-filter{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:6px;padding:6px 11px;
+  font-family:var(--font);font-size:11.5px;color:var(--text);
+  outline:none;width:170px;transition:var(--tr);
+}
+.dir-filter:focus{border-color:var(--yellow)}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px}
+.tool-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:11px;padding:14px;cursor:pointer;
+  transition:var(--tr);display:flex;flex-direction:column;gap:9px;
+  position:relative;
+}
+.tool-card:hover{border-color:var(--cat-border,var(--yellow));box-shadow:var(--shadow);transform:translateY(-2px)}
+.tool-card:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(245,200,0,.18)}
+.tool-card-top{display:flex;align-items:center;gap:10px}
+.tool-logo{
+  width:40px;height:40px;border-radius:9px;overflow:hidden;flex-shrink:0;
+  background:var(--bg2);display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);
+}
+.tool-logo img{width:100%;height:100%;object-fit:contain;padding:4px;border-radius:7px}
+.tool-logo-fb{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font);font-size:12px;font-weight:700;color:#fff;border-radius:8px;
+}
+.tool-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.2}
+.tool-domain{font-size:9.5px;color:var(--text3);margin-top:2px;font-weight:400}
+.tool-desc{font-size:11.5px;color:var(--text2);line-height:1.62;font-weight:400}
+.tool-tags{display:flex;flex-wrap:wrap;gap:4px}
+.tool-tag{font-size:9px;padding:2px 7px;border-radius:20px;background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
+.tool-foot{display:flex;align-items:center;justify-content:space-between;padding-top:7px;border-top:1px solid var(--border2);margin-top:auto}
+.tool-open{font-size:9.5px;font-weight:600;padding:4px 10px;border-radius:6px;text-decoration:none;transition:var(--tr);display:inline-flex;align-items:center;gap:4px}
+.tool-open:hover{opacity:.85}
+.tool-cat-badge{font-size:8.5px;padding:2px 7px;border-radius:20px;font-weight:500}
+.rating-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:11px 11px 0 0}
+
+/* ══════════════════════════════════════════════════
+   SEARCH RESULTS VIEW
+══════════════════════════════════════════════════ */
+#searchView{display:none}
+.sv-header{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:14px;border-bottom:1.5px solid var(--border);padding-top:24px}
+.sv-back{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-family:var(--font);font-size:11.5px;color:var(--text2);cursor:pointer;transition:var(--tr);display:flex;align-items:center;gap:4px}
+.sv-back:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+.sv-title{font-family:var(--font);font-size:20px;font-weight:800;letter-spacing:-.03em}
+.sv-count{font-size:10.5px;color:var(--text3);margin-left:auto;background:var(--bg2);border-radius:20px;padding:3px 10px;border:1px solid var(--border)}
+
+/* ══════════════════════════════════════════════════
+   MODAL
+══════════════════════════════════════════════════ */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.78);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border-radius:18px;max-width:510px;width:100%;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);animation:mIn .22s ease}
+@keyframes mIn{from{opacity:0;transform:scale(.96) translateY(10px)}to{opacity:1;transform:none}}
+.modal-accent{height:4px;border-radius:18px 18px 0 0}
+.modal-head{padding:20px 22px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px}
+.modal-logo{width:52px;height:52px;border-radius:13px;overflow:hidden;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.modal-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+.modal-logo-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:17px;font-weight:700;color:#fff;border-radius:12px}
+.modal-name{font-family:var(--font);font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--text)}
+.modal-cat-badge{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px}
+.modal-close{margin-left:auto;width:30px;height:30px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text3);transition:var(--tr);flex-shrink:0}
+.modal-close:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+.modal-body{padding:18px 22px}
+.modal-lbl{font-size:9px;font-weight:700;color:var(--text3);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:6px}
+.modal-desc{font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:18px;font-weight:400}
+.modal-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:18px}
+.modal-tag{font-size:10px;padding:3px 10px;border-radius:20px;background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
+.modal-rating-row{display:flex;align-items:center;gap:9px;margin-bottom:16px;padding:11px 13px;border-radius:7px;background:var(--bg2);border:1px solid var(--border)}
+.modal-rating-badge{margin-left:auto;padding:3px 9px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.modal-url-row{background:var(--bg2);border-radius:7px;padding:9px 13px;display:flex;align-items:center;gap:9px;margin-bottom:12px;border:1px solid var(--border)}
+.modal-url{font-size:10px;color:var(--text3);flex:1;word-break:break-all;font-weight:400}
+.modal-btn{width:100%;padding:12px;border-radius:9px;border:none;font-family:var(--font);font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;transition:opacity var(--tr)}
+.modal-btn:hover{opacity:.88}
+
+/* ══════════════════════════════════════════════════
+   FOOTER — redesigned
+══════════════════════════════════════════════════ */
+.footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:0 28px 0;
+}
+/* Featured tools section inside footer */
+.footer-featured{
+  max-width:1140px;margin:0 auto;
+  padding:28px 0 24px;
+  border-bottom:1px solid var(--border2);
+}
+.footer-feat-label{
+  font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text3);margin-bottom:12px;
+}
+.footer-feat-scroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.footer-feat-scroll::-webkit-scrollbar{display:none}
+/* Bottom credits bar */
+.footer-bottom{
+  max-width:1140px;margin:0 auto;
+  padding:18px 0 22px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:16px;
+}
+.footer-credit{
+  font-family:var(--font);font-size:13px;font-weight:600;
+  color:var(--text2);justify-self:start;
+}
+.footer-credit span{color:var(--yellow);font-weight:800}
+.footer-socials{
+  display:flex;align-items:center;gap:10px;
+  justify-self:center;
+}
+.social-link{
+  width:36px;height:36px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.06);border:1px solid var(--border);
+  cursor:pointer;transition:var(--tr);text-decoration:none;
+  color:var(--text3);
+}
+.social-link:hover{background:rgba(255,255,255,.12);border-color:var(--text3);color:var(--text);transform:translateY(-2px)}
+.social-link svg{width:16px;height:16px;fill:currentColor;stroke:none}
+/* Suggest button — right-aligned */
+.btn-suggest{
+  display:inline-flex;align-items:center;gap:5px;padding:6px 14px;
+  border-radius:20px;font-size:10.5px;border:1px solid var(--border);
+  color:var(--text3);transition:var(--tr);cursor:pointer;font-family:var(--font);
+  text-decoration:none;justify-self:end;white-space:nowrap;
+}
+.btn-suggest svg{stroke:currentColor;fill:none;flex-shrink:0}
+.btn-suggest:hover{border-color:var(--yellow);color:var(--yellow);background:rgba(245,200,0,.06)}
+
+/* ══════════════════════════════════════════════════
+   ANIM / RESPONSIVE
+══════════════════════════════════════════════════ */
+.cat-block{animation:fadeUp .3s ease both}
+.tool-card{animation:fadeUp .25s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr;gap:14px}
+  .hero-stats{display:none}
+  .tb-cats{display:none}
+  .home-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-block{aspect-ratio:auto;min-height:152px}
+  .tool-grid{grid-template-columns:1fr 1fr}
+  .content,.hero,.hero-search{padding-left:14px;padding-right:14px}
+  .footer-bottom{grid-template-columns:1fr;justify-items:center;gap:14px;padding:16px 0 20px}
+  .footer-credit{justify-self:center}
+  .btn-suggest{justify-self:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ▸ SWATCH TOP -->
+<div class="swatch" id="swatchTop"></div>
+
+<!-- ▸ TOPBAR -->
+<header class="topbar">
+  <div class="tb-logo" onclick="showHome()" title="Inicio">
+    <div class="tb-mark"><img src="data:image/png;base64,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" alt="AI Tools Guide" width="30" height="30"></div>
+    <span class="tb-logotxt" data-i18n="brand">Guía de Herramientas IA</span>
+  </div>
+  <div class="tb-sep"></div>
+
+  <!-- ▸ CENTER ZONE — mutates between Home (search) and Category (tabs) -->
+  <div class="tb-center" id="tbCenter">
+    <!-- State A: HOME — search bar centered in topbar -->
+    <div class="tb-center-search" id="tbCenterSearch">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="tbSearchInput" class="tb-search-input"
+        oninput="heroSearch(this.value)" onkeydown="if(event.key==='Enter')heroSearch(this.value)">
+      <button class="tb-search-go" onclick="heroSearch(document.getElementById('tbSearchInput').value)">
+        <span data-i18n="search_btn">Buscar →</span>
+      </button>
+    </div>
+    <!-- State B: CATEGORY/DETAIL — scrollable category tabs -->
+    <div class="tb-cats" id="tbCats"></div>
+  </div>
+
+  <div class="tb-right">
+    <div class="tb-count" id="tbCount">130+ Tools</div>
+    <!-- Language dropdown -->
+    <div class="lang-wrap" id="langWrap">
+      <div class="lang-current" id="langCurrent" onclick="toggleLangMenu()">
+        <span id="langFlag">🇨🇱</span>
+        <span id="langCode">ES</span>
+        <svg viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+      </div>
+      <div class="lang-dropdown" id="langDropdown"></div>
+    </div>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Modo claro/oscuro">🌙</button>
+  </div>
+</header>
+
+<!-- ▸ SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="if(event.target===this)closeSearch()">
+  <div class="search-box">
+    <div class="search-inner">
+      <span class="search-ico">⌕</span>
+      <input class="search-field" type="text" id="overlaySearch"
+        placeholder="Busca herramienta, función, categoría..."
+        oninput="runSearch(this.value)" autofocus>
+      <button class="search-esc" onclick="closeSearch()">ESC</button>
+    </div>
+    <div id="overlayResults">
+      <div class="sr-lbl" data-i18n="featured_tools">HERRAMIENTAS DESTACADAS</div>
+      <div class="sr-mini-grid" id="featuredSGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ▸ MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-accent" id="mAccent"></div>
+    <div class="modal-head">
+      <div class="modal-logo" id="mLogo"></div>
+      <div>
+        <div class="modal-name" id="mName"></div>
+        <div class="modal-cat-badge" id="mBadge"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-lbl" data-i18n="description">Descripción</div>
+      <div class="modal-desc" id="mDesc"></div>
+      <div class="modal-rating-row" id="mRatingRow">
+        <span id="mRatingIco"></span>
+        <span id="mRatingTxt" style="font-size:11.5px;color:var(--text2)"></span>
+        <span class="modal-rating-badge" id="mRatingBadge"></span>
+      </div>
+      <div class="modal-lbl" data-i18n="tags">Etiquetas</div>
+      <div class="modal-tags" id="mTags"></div>
+      <div class="modal-url-row">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <span class="modal-url" id="mUrl"></span>
+      </div>
+      <a class="modal-btn" id="mBtn" target="_blank" rel="noopener">Abrir herramienta ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- ▸ HOME VIEW -->
+<div id="homeView">
+  <div class="hero">
+    <div>
+      <h1 class="hero-title">
+        <span data-i18n="title_line1">GUÍA DE</span><br>
+        <span class="yl" data-i18n="title_line2">HERRAMIENTAS IA</span>
+      </h1>
+      <p class="hero-tagline" data-i18n="tagline">
+        Una guía gratuita con más de 130 herramientas de IA, organizadas en 12 categorías según su función generativa con enlaces de acceso directo. 
+        Disponible en 14 idiomas, lo que la convierte en un recurso multicultural.
+      </p>
+    </div>
+    <div class="hero-stats">
+      <div><span class="hero-stat-n" id="heroToolCount">130+</span><span class="hero-stat-l" data-i18n="stat_tools">Herramientas</span></div>
+      <div style="margin-top:4px"><span class="hero-stat-n">12</span><span class="hero-stat-l" data-i18n="stat_cats">Categorías</span></div>
+    </div>
+  </div>
+  <div class="hero-search">
+    <div class="hero-search-inner">
+      <input class="hero-search-input" type="text" id="heroSearchInput"
+        placeholder="Busca ChatGPT, generación de video, código, música..."
+        oninput="heroSearch(this.value)" onkeydown="if(event.key==='Enter')heroSearch(this.value)">
+      <button class="hero-search-btn" onclick="heroSearch(document.getElementById('heroSearchInput').value)">
+        <span data-i18n="search_btn">Buscar →</span>
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="sec-label" data-i18n="explore_label">Explorar por categoría</div>
+    <div class="home-grid" id="homeGrid"></div>
+  </div>
+</div>
+
+<!-- ▸ DETAIL VIEW -->
+<div id="dirView">
+  <div class="content" id="dirContent"></div>
+</div>
+
+<!-- ▸ SEARCH RESULTS VIEW -->
+<div id="searchView">
+  <div class="content" style="padding-top:0">
+    <div class="sv-header">
+      <button class="sv-back" onclick="showHome()">← <span data-i18n="back_home">Inicio</span></button>
+      <div class="sv-title" id="svTitle"></div>
+      <div class="sv-count" id="svCount"></div>
+    </div>
+    <div class="tool-grid" id="svGrid"></div>
+  </div>
+</div>
+
+<!-- ▸ FOOTER -->
+<footer class="footer">
+  <!-- Featured tools inside footer -->
+  <div class="footer-featured">
+    <div class="footer-feat-label" data-i18n="featured_tools">Herramientas Destacadas</div>
+    <div class="footer-feat-scroll" id="footFeatScroll"></div>
+  </div>
+  <!-- Credits + socials -->
+  <div class="footer-bottom">
+
+    <!-- LEFT: credit -->
+    <div class="footer-credit">
+      <span>Desarrollado por</span>BRUNI
+    </div>
+
+    <!-- CENTER: 3 social icons only -->
+    <div class="footer-socials">
+      <a class="social-link" href="https://www.linkedin.com/in/felipebruna/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a class="social-link" href="https://www.instagram.com/funfinfun/" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="social-link" href="https://www.facebook.com/HEYOK" target="_blank" rel="noopener" title="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+    </div>
+
+    <!-- RIGHT: email icon + suggest text -->
+    <a href="mailto:felibruna@gmail.com?subject=Sugerencia%20Guia%20IA" class="btn-suggest" id="suggestLink">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span data-i18n="suggest">¿Falta una herramienta?</span>
+    </a>
+
+  </div>
+</footer>
+<div class="swatch" id="swatchBot"></div>
+
+<script>
+/* ════════════════════════════════════════════════════════════════
+   PALETTE
+════════════════════════════════════════════════════════════════ */
+const PAL={
+  A:{acc:'#C8A800',dk:'#5A4A00'},B:{acc:'#D4720A',dk:'#5A2800'},
+  C:{acc:'#C43020',dk:'#5A0A00'},D:{acc:'#C45030',dk:'#5A1800'},
+  E:{acc:'#B04070',dk:'#5A0030'},F:{acc:'#C04060',dk:'#5A0020'},
+  G:{acc:'#904090',dk:'#3A0040'},H:{acc:'#7040A0',dk:'#280050'},
+  I:{acc:'#2060A0',dk:'#001840'},J:{acc:'#208070',dk:'#003030'},
+  K:{acc:'#208040',dk:'#003010'},L:{acc:'#608030',dk:'#203000'},
+};
+
+/* ════════════════════════════════════════════════════════════════
+   ICONS (SVG per category)
+════════════════════════════════════════════════════════════════ */
+const ICONS={
+  A:`<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1" fill="white"/><circle cx="12" cy="10" r="1" fill="white"/><circle cx="15" cy="10" r="1" fill="white"/></svg>`,
+  B:`<svg viewBox="0 0 24 24"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M22 8l-4 4 4 4V8z"/><polygon points="10,8 10,14 15,11" fill="rgba(255,255,255,.5)" stroke="none"/></svg>`,
+  C:`<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>`,
+  D:`<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="white" stroke="none"/><polyline points="21,15 16,10 11,15"/><polyline points="16,10 11,15 7,11"/></svg>`,
+  E:`<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+  F:`<svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`,
+  G:`<svg viewBox="0 0 24 24"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/><line x1="19" y1="12" x2="5" y2="12" stroke-dasharray="3 2"/></svg>`,
+  H:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><line x1="12" y1="12" x2="4" y2="6"/><line x1="12" y1="12" x2="20" y2="6"/><line x1="12" y1="12" x2="4" y2="18"/><line x1="12" y1="12" x2="20" y2="18"/></svg>`,
+  I:`<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>`,
+  J:`<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>`,
+  K:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>`,
+  L:`<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>`,
+};
+
+/* ════════════════════════════════════════════════════════════════
+   14-LANGUAGE SYSTEM
+   Translations for all UI strings.
+   Tool descriptions fallback to 'es' if lang not present.
+════════════════════════════════════════════════════════════════ */
+const LANGS=[
+  {code:'es',label:'Español',     flag:'🇨🇱',native:'Spanish'},
+  {code:'en',label:'English',     flag:'🇺🇸',native:'English'},
+  {code:'fr',label:'Français',    flag:'🇫🇷',native:'French'},
+  {code:'pt',label:'Português',   flag:'🇧🇷',native:'Portuguese'},
+  {code:'de',label:'Deutsch',     flag:'🇩🇪',native:'German'},
+  {code:'zh',label:'普通话',       flag:'🇨🇳',native:'Mandarin Chinese'},
+  {code:'yue',label:'粤語',        flag:'🇭🇰',native:'Cantonese'},
+  {code:'ja',label:'日本語',       flag:'🇯🇵',native:'Japanese'},
+  {code:'ko',label:'한국어',       flag:'🇰🇷',native:'Korean'},
+  {code:'ru',label:'Русский',     flag:'🇷🇺',native:'Russian'},
+  {code:'ar',label:'العربية',     flag:'🇸🇦',native:'Arabic'},
+  {code:'it',label:'Italiano',    flag:'🇮🇹',native:'Italian'},
+  {code:'hi',label:'हिन्दी',       flag:'🇮🇳',native:'Hindi'},
+  {code:'hr',label:'Hrvatski',    flag:'🇭🇷', native:'Croatian'},
+];
+
+/* UI strings per language */
+const UI={
+  brand:      {es:'GUÍA IA',en:'AI GUIDE',fr:'GUIDE IA',pt:'GUIA IA',de:'KI-GUIDE',zh:'AI 指南',yue:'AI 指南',ja:'AIガイド',ko:'AI 가이드',ru:'ИИ ГАЙД',ar:'دليل AI',it:'GUIDA AI',hi:'AI गाइड',hr:'AI VODIČ'},
+  search:     {es:'Buscar',en:'Search',fr:'Chercher',pt:'Buscar',de:'Suchen',zh:'搜索',yue:'搜尋',ja:'検索',ko:'검색',ru:'Поиск',ar:'بحث',it:'Cerca',hi:'खोजें',hr:'Pretraga'},
+  tool_count_label:{es:'130+',en:'130+',fr:'130+',pt:'130+',de:'130+',zh:'130+',yue:'130+',hr:'130+',ja:'130+',ko:'130+',ru:'130+',ar:'130+',it:'130+',hi:'130+'},
+  title_line1:{es:'GUÍA DE',en:'GUIDE TO',fr:'GUIDE',pt:'GUIA DE',de:'LEITFADEN',zh:'指南：',yue:'指南：',ja:'ガイド',ko:'가이드',ru:'ГАЙД ПО',ar:'دليل',it:'GUIDA',hi:'गाइड',hr:'VODIČ ZA'},
+  title_line2:{es:'HERRAMIENTAS IA',en:'AI TOOLS',fr:'OUTILS IA',pt:'FERRAMENTAS IA',de:'KI-TOOLS',zh:'AI工具',yue:'AI工具',ja:'AIツール',ko:'AI 도구',ru:'ИНСТРУМЕНТАМ ИИ',ar:'أدوات الذكاء الاصطناعي',it:'STRUMENTI AI',hi:'AI टूल्स',hr:'AI ALATE'},
+  tagline:    {es:'Explora y accede a las herramientas de inteligencia artificial organizadas por categoría.',en:'Explore and access artificial intelligence tools organized by category.',fr:'Explorez et accédez aux outils d\'IA organisés par catégorie.',pt:'Explore e acesse ferramentas de inteligência artificial organizadas por categoria.',de:'Erkunde und greife auf KI-Tools zu, die nach Kategorien geordnet sind.',zh:'探索并访问按类别整理的人工智能工具。',yue:'探索同使用按類別整理嘅人工智能工具。',ja:'カテゴリ別に整理されたAIツールを探索してアクセスしましょう。',ko:'카테고리별로 정리된 인공지능 도구를 탐색하고 접근하세요.',ru:'Исследуйте инструменты ИИ, организованные по категориям.',ar:'استكشف أدوات الذكاء الاصطناعي المنظمة حسب الفئات.',it:'Esplora e accedi agli strumenti di intelligenza artificiale organizzati per categoria.',hi:'श्रेणी के अनुसार व्यवस्थित AI टूल्स को एक्सप्लोर करें और एक्सेस करें।',hr:'Istražite i pristupite alatima umjetne inteligencije organiziranim po kategorijama.'},
+  stat_tools: {es:'Herramientas',en:'Tools',fr:'Outils',pt:'Ferramentas',de:'Tools',zh:'工具',yue:'工具',ja:'ツール',ko:'도구',ru:'Инструментов',ar:'أداة',it:'Strumenti',hi:'टूल्स',hr:'Alati'},
+  stat_cats:  {es:'Categorías',en:'Categories',fr:'Catégories',pt:'Categorias',de:'Kategorien',zh:'类别',yue:'類別',ja:'カテゴリ',ko:'카테고리',ru:'Категорий',ar:'فئة',it:'Categorie',hi:'श्रेणियाँ',hr:'Kategorije'},
+  explore_label:{es:'Explorar por categoría',en:'Explore by category',fr:'Explorer par catégorie',pt:'Explorar por categoria',de:'Nach Kategorie erkunden',zh:'按类别探索',yue:'按類別探索',ja:'カテゴリ別に探索',ko:'카테고리별 탐색',ru:'Обзор по категориям',ar:'استكشف حسب الفئة',it:'Esplora per categoria',hi:'श्रेणी द्वारा एक्सप्लोर',hr:'Istraži po kategoriji'},
+  featured_tools:{es:'Herramientas Destacadas',en:'Featured Tools',fr:'Outils en vedette',pt:'Ferramentas em destaque',de:'Ausgewählte Tools',zh:'精选工具',yue:'精選工具',ja:'注目ツール',ko:'주요 도구',ru:'Избранные инструменты',ar:'أدوات مميزة',it:'Strumenti in evidenza',hi:'फीचर्ड टूल्स',hr:'Izdvojeni alati'},
+  description:{es:'Descripción',en:'Description',fr:'Description',pt:'Descrição',de:'Beschreibung',zh:'描述',yue:'描述',ja:'説明',ko:'설명',ru:'Описание',ar:'وصف',it:'Descrizione',hi:'विवरण',hr:'Opis'},
+  tags:       {es:'Etiquetas',en:'Tags',fr:'Étiquettes',pt:'Etiquetas',de:'Tags',zh:'标签',yue:'標籤',ja:'タグ',ko:'태그',ru:'Теги',ar:'علامات',it:'Tag',hi:'टैग',hr:'Oznake'},
+  open_tool:  {es:'Abrir',en:'Open',fr:'Ouvrir',pt:'Abrir',de:'Öffnen',zh:'打开',yue:'開啟',ja:'開く',ko:'열기',ru:'Открыть',ar:'فتح',it:'Apri',hi:'खोलें',hr:'Otvori'},
+  back_home:  {es:'Inicio',en:'Home',fr:'Accueil',pt:'Início',de:'Startseite',zh:'首页',yue:'主頁',ja:'ホーム',ko:'홈',ru:'Главная',ar:'الرئيسية',it:'Home',hi:'होम',hr:'Početna'},
+  filter_ph:  {es:'Filtrar...',en:'Filter...',fr:'Filtrer...',pt:'Filtrar...',de:'Filtern...',zh:'筛选...',yue:'篩選...',ja:'絞り込み...',ko:'필터...',ru:'Фильтр...',ar:'تصفية...',it:'Filtra...',hi:'फ़िल्टर...',hr:'Filtriraj...'},
+  search_ph:  {es:'Busca ChatGPT, generación de video, código...',en:'Search ChatGPT, video generation, code...',fr:'Chercher ChatGPT, génération vidéo...',pt:'Busca ChatGPT, geração de vídeo...',de:'Suche ChatGPT, Videogenerierung...',zh:'搜索 ChatGPT、视频生成...',yue:'搜尋 ChatGPT、影片生成...',ja:'ChatGPT、動画生成を検索...',ko:'ChatGPT, 비디오 생성 검색...',ru:'Поиск ChatGPT, генерация видео...',ar:'ابحث عن ChatGPT، إنشاء الفيديو...',it:'Cerca ChatGPT, generazione video...',hi:'ChatGPT, वीडियो जेनरेशन खोजें...',hr:'Pretraži ChatGPT, generiranje videa, kod...'},
+  search_overlay_ph:{es:'Busca herramienta, función, categoría...',en:'Search tool, function, category...',fr:'Outil, fonction, catégorie...',pt:'Ferramenta, função, categoria...',de:'Tool, Funktion, Kategorie...',zh:'搜索工具、功能、类别...',yue:'搜尋工具、功能、類別...',ja:'ツール、機能、カテゴリを検索...',ko:'도구, 기능, 카테고리 검색...',ru:'Инструмент, функция, категория...',ar:'أداة، وظيفة، فئة...',it:'Strumento, funzione, categoria...',hi:'टूल, फ़ंक्शन, श्रेणी खोजें...',hr:'Alat, funkcija, kategorija...'},
+  search_btn: {es:'Buscar →',en:'Search →',fr:'Chercher →',pt:'Buscar →',de:'Suchen →',zh:'搜索 →',yue:'搜尋 →',ja:'検索 →',ko:'검색 →',ru:'Найти →',ar:'← بحث',it:'Cerca →',hi:'खोजें →',hr:'Pretraži →'},
+  suggest:    {es:'¿Falta una herramienta?',en:'Missing a tool?',fr:'Un outil manquant ?',pt:'Falta alguma ferramenta?',de:'Fehlt ein Tool?',zh:'缺少工具？',yue:'缺少工具？',ja:'ツールが足りませんか？',ko:'도구가 없나요?',ru:'Не хватает инструмента?',ar:'هل تنقص أداة؟',it:'Manca uno strumento?',hi:'कोई टूल गायब है?',hr:'Nedostaje li alat?'},
+  essential_lbl:{es:'Esencial',en:'Essential',fr:'Essentiel',pt:'Essencial',de:'Unverzichtbar',zh:'必备',yue:'必備',ja:'必須',ko:'필수',ru:'Обязательный',ar:'أساسي',it:'Essenziale',hi:'ज़रूरी',hr:'Bitno'},
+  recommended_lbl:{es:'Recomendada',en:'Recommended',fr:'Recommandé',pt:'Recomendada',de:'Empfohlen',zh:'推荐',yue:'推薦',ja:'おすすめ',ko:'추천',ru:'Рекомендуемый',ar:'موصى به',it:'Consigliato',hi:'अनुशंसित',hr:'Preporučeno'},
+  essential_desc:{es:'Herramienta imprescindible · bruni pick',en:'Must-have tool · bruni pick',fr:'Outil indispensable · bruni pick',pt:'Ferramenta indispensável · bruni pick',de:'Unverzichtbares Tool · bruni pick',zh:'必备工具 · bruni pick',yue:'必備工具 · bruni pick',ja:'必須ツール · bruni pick',ko:'필수 도구 · bruni pick',ru:'Обязательный инструмент · bruni pick',ar:'أداة لا غنى عنها · bruni pick',it:'Strumento imprescindibile · bruni pick',hi:'ज़रूरी टूल · bruni pick',hr:'Nezaobilazan alat · bruni pick'},
+  recommended_desc:{es:'Herramienta sólida · bruni pick',en:'Solid tool · bruni pick',fr:'Outil fiable · bruni pick',pt:'Ferramenta sólida · bruni pick',de:'Solides Tool · bruni pick',zh:'可靠工具 · bruni pick',yue:'可靠工具 · bruni pick',ja:'堅実なツール · bruni pick',ko:'검증된 도구 · bruni pick',ru:'Надёжный инструмент · bruni pick',ar:'أداة موثوقة · bruni pick',it:'Strumento affidabile · bruni pick',hi:'ठोस टूल · bruni pick',hr:'Pouzdan alat · bruni pick'},
+  tools_count:{es:'herramientas',en:'tools',fr:'outils',pt:'ferramentas',de:'Tools',zh:'工具',yue:'工具',ja:'ツール',ko:'도구',ru:'инструментов',ar:'أداة',it:'strumenti',hi:'टूल्स',hr:'alata'},
+};
+
+/* Short topbar labels per lang */
+const CAT_SHORT={
+  A:{es:'Asistentes',en:'Assistants',fr:'Assistants',pt:'Assistentes',de:'Assistenten',zh:'助手',yue:'助手',ja:'アシスタント',ko:'어시스턴트',ru:'Ассистенты',ar:'مساعدون',it:'Assistenti',hi:'असिस्टेंट',hr:'Asistenti'},
+  B:{es:'Video',en:'Video',fr:'Vidéo',pt:'Vídeo',de:'Video',zh:'视频',yue:'影片',ja:'動画',ko:'비디오',ru:'Видео',ar:'فيديو',it:'Video',hi:'वीडियो',hr:'Video'},
+  C:{es:'Edición',en:'Editing',fr:'Édition',pt:'Edição',de:'Bearbeitung',zh:'编辑',yue:'編輯',ja:'編集',ko:'편집',ru:'Монтаж',ar:'تحرير',it:'Editing',hi:'संपादन',hr:'Uređivanje'},
+  D:{es:'Imágenes',en:'Images',fr:'Images',pt:'Imagens',de:'Bilder',zh:'图像',yue:'圖像',ja:'画像',ko:'이미지',ru:'Изображения',ar:'صور',it:'Immagini',hi:'छवियाँ',hr:'Slike'},
+  E:{es:'Avatares',en:'Avatars',fr:'Avatars',pt:'Avatares',de:'Avatare',zh:'虚拟形象',yue:'虛擬形象',ja:'アバター',ko:'아바타',ru:'Аватары',ar:'الأفاتار',it:'Avatar',hi:'अवतार',hr:'Avatari'},
+  F:{es:'Audio',en:'Audio',fr:'Audio',pt:'Áudio',de:'Audio',zh:'音频',yue:'音訊',ja:'音声',ko:'오디오',ru:'Аудио',ar:'صوت',it:'Audio',hi:'ऑडियो',hr:'Audio'},
+  G:{es:'Coding',en:'Coding',fr:'Code',pt:'Código',de:'Code',zh:'编程',yue:'編程',ja:'コーディング',ko:'코딩',ru:'Разработка',ar:'برمجة',it:'Coding',hi:'कोडिंग',hr:'Kodiranje'},
+  H:{es:'Agentes',en:'Agents',fr:'Agents',pt:'Agentes',de:'Agenten',zh:'智能体',yue:'智能體',ja:'エージェント',ko:'에이전트',ru:'Агенты',ar:'وكلاء',it:'Agenti',hi:'एजेंट',hr:'Agenti'},
+  I:{es:'Escritura',en:'Writing',fr:'Écriture',pt:'Escrita',de:'Schreiben',zh:'写作',yue:'寫作',ja:'ライティング',ko:'글쓰기',ru:'Письмо',ar:'كتابة',it:'Scrittura',hi:'लेखन',hr:'Pisanje'},
+  J:{es:'Diseño',en:'Design',fr:'Design',pt:'Design',de:'Design',zh:'设计',yue:'設計',ja:'デザイン',ko:'디자인',ru:'Дизайн',ar:'تصميم',it:'Design',hi:'डिज़ाइन',hr:'Dizajn'},
+  K:{es:'Google IA',en:'Google AI',fr:'Google IA',pt:'Google IA',de:'Google KI',zh:'谷歌AI',yue:'Google AI',ja:'Google AI',ko:'Google AI',ru:'Google ИИ',ar:'جوجل AI',it:'Google IA',hi:'Google AI',hr:'Google AI'},
+  L:{es:'No-Code',en:'No-Code',fr:'Sans code',pt:'Sem código',de:'No-Code',zh:'无代码',yue:'無代碼',ja:'ノーコード',ko:'노코드',ru:'Без кода',ar:'بدون كود',it:'No-Code',hi:'नो-कोड',hr:'Bez koda'},
+};
+
+/* ════════════════════════════════════════════════════════════════
+   TOOL DATA — 130+ tools across 12 categories
+   logo field uses Google S2 favicons for best quality
+════════════════════════════════════════════════════════════════ */
+function gfav(domain){return`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+
+const CATS=[
+ {id:'A',
+  es:{title:'ASISTENTES LLM Y CHATBOTS',sub:'Conversacional · Multimodal · Búsqueda IA'},
+  en:{title:'LLM ASSISTANTS & CHATBOTS',sub:'Conversational · Multimodal · AI Search'},
+  fr:{title:'ASSISTANTS LLM ET CHATBOTS',sub:'Conversationnel · Multimodal · Recherche IA'},
+  pt:{title:'ASSISTENTES LLM E CHATBOTS',sub:'Conversacional · Multimodal · Pesquisa IA'},
+  de:{title:'LLM-ASSISTENTEN & CHATBOTS',sub:'Konversation · Multimodal · KI-Suche'},
+  zh:{title:'LLM助手与聊天机器人',sub:'对话式 · 多模态 · AI搜索'},
+  yue:{title:'LLM助手與聊天機械人',sub:'對話式 · 多模態 · AI搜尋'},
+  ja:{title:'LLMアシスタント＆チャットボット',sub:'対話型 · マルチモーダル · AI検索'},
+  ko:{title:'LLM 어시스턴트 및 챗봇',sub:'대화형 · 멀티모달 · AI 검색'},
+  ru:{title:'LLM-АССИСТЕНТЫ И ЧАТ-БОТЫ',sub:'Диалоговые · Мультимодальные · ИИ-поиск'},
+  ar:{title:'مساعدو LLM وروبوتات الدردشة',sub:'محادثة · متعدد الوسائط · بحث بالذكاء الاصطناعي'},
+  it:{title:'ASSISTENTI LLM E CHATBOT',sub:'Conversazionale · Multimodale · Ricerca IA'},
+  hi:{title:'LLM असिस्टेंट और चैटबॉट',sub:'संवादात्मक · मल्टीमॉडल · AI खोज'},
+  hr:{title:'LLM ASISTENTI I CHATBOTOVI',sub:'Konverzacijski · Multimodalni · AI pretraživanje'},
+  tools:[
+   {ab:'CL',n:'Claude',url:'claude.ai',logo:gfav('claude.ai'),rating:'essential',es:'Asistente Anthropic. Líder en escritura, análisis, código y razonamiento avanzado.',en:'Anthropic\'s assistant. Leader in writing, analysis, code and advanced reasoning.',tags:['escritura','código','Anthropic','razonamiento']},
+   {ab:'CH',n:'ChatGPT',url:'chatgpt.com',logo:gfav('chatgpt.com'),rating:'essential',es:'El chatbot más popular de OpenAI. Multimodal con GPT-4o, o3 y plugins.',en:'OpenAI\'s most popular chatbot. Multimodal with GPT-4o, o3 and plugins.',tags:['conversacional','multimodal','OpenAI','plugins']},
+   {ab:'GR',n:'Grok',url:'x.ai/grok',logo:gfav('x.ai'),rating:'recommended',es:'IA de xAI. Integrado en X/Twitter con búsqueda en tiempo real y voz.',en:'xAI assistant. Integrated in X/Twitter with real-time search and voice.',tags:['tiempo real','X/Twitter','xAI','tendencias']},
+   {ab:'GE',n:'Gemini',url:'gemini.google.com',logo:gfav('gemini.google.com'),rating:'essential',es:'Asistente multimodal de Google. Drive, Docs, Gmail. Contexto de 2M tokens.',en:'Google\'s multimodal assistant. Drive, Docs, Gmail. 2M token context.',tags:['multimodal','Google','2M tokens','Drive']},
+   {ab:'PE',n:'Perplexity',url:'perplexity.ai',logo:gfav('perplexity.ai'),rating:'recommended',es:'Búsqueda conversacional con fuentes citadas. El mejor para research rápido.',en:'Conversational search with cited sources. Best for quick research.',tags:['búsqueda','fuentes','research','tiempo real']},
+   {ab:'CO',n:'Copilot',url:'copilot.microsoft.com',logo:gfav('copilot.microsoft.com'),es:'Asistente Microsoft integrado en Office 365, Teams y Bing. Powered by GPT-4.',en:'Microsoft assistant integrated in Office 365, Teams and Bing.',tags:['Microsoft','Office','Teams','Bing']},
+   {ab:'ME',n:'Meta AI',url:'meta.ai',logo:gfav('meta.ai'),es:'Integrado en WhatsApp, Instagram, Facebook y Messenger. Base Llama 4.',en:'Integrated in WhatsApp, Instagram, Facebook and Messenger. Llama 4 base.',tags:['Meta','WhatsApp','Instagram','social']},
+   {ab:'MI',n:'Mistral AI',url:'mistral.ai',logo:gfav('mistral.ai'),rating:'recommended',es:'LLMs europeos open source. Le Chat. Mistral Large 2 y Codestral.',en:'European open source LLMs. Le Chat. Mistral Large 2 and Codestral.',tags:['open source','Europa','API','eficiente']},
+   {ab:'DE',n:'DeepSeek',url:'chat.deepseek.com',logo:gfav('deepseek.com'),rating:'recommended',es:'Modelo chino open source. R2 con razonamiento avanzado y bajo costo.',en:'Chinese open source model. R2 with advanced reasoning at low cost.',tags:['open source','razonamiento','bajo costo','R2']},
+   {ab:'QW',n:'Qwen',url:'chat.qwen.ai',logo:gfav('qwen.ai'),es:'LLM de Alibaba. Qwen3 multimodal, multilenguaje y open source.',en:'Alibaba LLM. Qwen3 multimodal, multilingual and open source.',tags:['Alibaba','multimodal','open source','código']},
+   {ab:'PO',n:'Poe',url:'poe.com',logo:gfav('poe.com'),es:'Acceso a GPT-4, Claude, Gemini, Llama y más desde una sola interfaz.',en:'Access to GPT-4, Claude, Gemini, Llama and more from one interface.',tags:['multi-modelo','Quora','acceso','comparar']},
+   {ab:'HU',n:'HuggingChat',url:'huggingface.co/chat',logo:gfav('huggingface.co'),es:'Chat open source de HuggingFace. Múltiples modelos gratuitos.',en:'HuggingFace open source chat. Multiple free models.',tags:['open source','HuggingFace','gratis','modelos']},
+   {ab:'KI',n:'Kimi AI',url:'kimi.ai',logo:gfav('kimi.ai'),es:'Kimi k2 con coding visual y agent swarm. Contexto de 1M tokens.',en:'Kimi k2 with visual coding and agent swarm. 1M token context.',tags:['coding','agentes','visual','k2']},
+   {ab:'MO',n:'Morphic',url:'morphic.sh',logo:gfav('morphic.sh'),es:'Búsqueda IA open source. Respuestas con fuentes verificadas.',en:'Open source AI search. Answers with verified sources.',tags:['búsqueda','open source','fuentes','gratuito']},
+   {ab:'SK',n:'Skywork AI',url:'skywork.ai',logo:gfav('skywork.ai'),es:'Agente todo-en-uno con investigación profunda y multimodal.',en:'All-in-one agent with deep research and multimodal capabilities.',tags:['investigación','deep research','agente','búsqueda']},
+   {ab:'LM',n:'Le Chat',url:'chat.mistral.ai',logo:gfav('mistral.ai'),es:'Interfaz conversacional de Mistral. Rápido, multimodal y con web search.',en:'Mistral\'s conversational interface. Fast, multimodal with web search.',tags:['Mistral','rápido','multimodal','web search']},
+   {ab:'OR',n:'OpenRouter',url:'openrouter.ai',logo:gfav('openrouter.ai'),es:'API unificada para acceder a 200+ modelos de IA con un solo endpoint.',en:'Unified API to access 200+ AI models with a single endpoint.',tags:['API','multi-modelo','developers','200+ modelos']},
+  ]},
+ {id:'B',es:{title:'GENERACIÓN DE VIDEO',sub:'Text-to-Video · Image-to-Video · Edición IA'},en:{title:'VIDEO GENERATION',sub:'Text-to-Video · Image-to-Video · AI Editing'},fr:{title:'GÉNÉRATION DE VIDÉO',sub:'Texte-en-vidéo · Image-en-vidéo'},pt:{title:'GERAÇÃO DE VÍDEO',sub:'Texto-para-Vídeo · Imagem-para-Vídeo'},de:{title:'VIDEOGENERIERUNG',sub:'Text-zu-Video · Bild-zu-Video'},zh:{title:'视频生成',sub:'文本转视频 · 图像转视频'},yue:{title:'影片生成',sub:'文字轉影片 · 圖像轉影片 · AI編輯'},ja:{title:'動画生成',sub:'テキストから動画 · 画像から動画 · AI編集'},ko:{title:'비디오 생성',sub:'텍스트-비디오 · 이미지-비디오 · AI 편집'},ru:{title:'ГЕНЕРАЦИЯ ВИДЕО',sub:'Текст в видео · Изображение в видео · ИИ-монтаж'},ar:{title:'إنشاء الفيديو',sub:'نص إلى فيديو · صورة إلى فيديو · تحرير بالذكاء الاصطناعي'},it:{title:'GENERAZIONE DI VIDEO',sub:'Testo-a-Video · Immagine-a-Video · Editing IA'},hi:{title:'वीडियो जेनरेशन',sub:'टेक्स्ट-टू-वीडियो · इमेज-टू-वीडियो · AI एडिटिंग'},hr:{title:'GENERIRANJE VIDEA',sub:'Tekst-u-video · Slika-u-video · AI uređivanje'},tools:[
+  {ab:'SO',n:'Sora',url:'sora.com',logo:gfav('openai.com'),rating:'essential',es:'Video hiperrealista hasta 60 seg. World simulation. OpenAI.',en:'Hyper-realistic video up to 60 sec. World simulation by OpenAI.',tags:['hiperrealista','60s','OpenAI']},
+  {ab:'RU',n:'Runway',url:'runwayml.com',logo:gfav('runwayml.com'),rating:'essential',es:'Suite Gen-3/Gen-4 profesional. Inpainting, rotoscoping, motion brush.',en:'Professional Gen-3/Gen-4 suite. Inpainting, rotoscoping, motion brush.',tags:['Gen-4','inpainting','rotoscoping']},
+  {ab:'PI',n:'Pika',url:'pika.art',logo:gfav('pika.art'),rating:'recommended',es:'Videos cinematográficos. Pika 2.2 con efectos avanzados y lip-sync.',en:'Cinematic videos. Pika 2.2 with advanced effects and lip-sync.',tags:['text-to-video','animación','cinematográfico']},
+  {ab:'GO',n:'Google Flow',url:'labs.google/flow',logo:gfav('google.com'),rating:'recommended',es:'Editor video IA de Google. Veo 3 + Imagen 4 + audio nativo.',en:'Google AI video editor. Veo 3 + Imagen 4 + native audio.',tags:['Google','Veo 3','Imagen 4']},
+  {ab:'KL',n:'Kling AI',url:'klingai.com',logo:gfav('klingai.com'),rating:'recommended',es:'Física realista, lip-sync preciso y cámara virtual configurable.',en:'Realistic physics, precise lip-sync and configurable virtual camera.',tags:['física','lip-sync','cámara virtual']},
+  {ab:'LU',n:'Luma Ray 2',url:'lumalabs.ai',logo:gfav('lumalabs.ai'),rating:'recommended',es:'Ray 2: videos fluidos por Luma AI. Máxima consistencia de personajes.',en:'Ray 2: fluid videos by Luma AI. Maximum character consistency.',tags:['fluido','Luma AI','Ray 2']},
+  {ab:'HA',n:'Hailuo AI',url:'hailuoai.video',logo:gfav('hailuoai.video'),es:'Alta resolución. Motor MiniMax Video 01 Live.',en:'High resolution. MiniMax Video 01 Live engine.',tags:['alta res','MiniMax','01 Live']},
+  {ab:'SE',n:'Seedance',url:'seedance.ai',logo:gfav('seedance.ai'),es:'ByteDance. Multimodal con editor integrado y style transfer.',en:'ByteDance. Multimodal with integrated editor and style transfer.',tags:['ByteDance','multimodal','style transfer']},
+  {ab:'PX',n:'PixVerse',url:'pixverse.ai',logo:gfav('pixverse.ai'),es:'Videos estéticos. Efectos de cámara y estilos artísticos variados.',en:'Aesthetic videos. Camera effects and varied artistic styles.',tags:['estético','calidad','artístico']},
+  {ab:'VI',n:'Vidu AI',url:'vidu.studio',logo:gfav('vidu.studio'),es:'Prompts e imágenes en video fluido. Coherencia de personajes.',en:'Prompts and images to fluid video. Character consistency.',tags:['fluido','image-to-video','personajes']},
+  {ab:'FL',n:'Fliki',url:'fliki.ai',logo:gfav('fliki.ai'),es:'Scripts en videos con voces IA para YouTube y redes.',en:'Scripts to videos with AI voices for YouTube and social.',tags:['script-to-video','voz IA','YouTube']},
+  {ab:'VE',n:'VEED',url:'veed.io',logo:gfav('veed.io'),rating:'recommended',es:'Editor online con subtítulos automáticos y traducción IA.',en:'Online editor with automatic subtitles and AI translation.',tags:['editor online','subtítulos','traducción']},
+  {ab:'IN',n:'InVideo AI',url:'invideo.io',logo:gfav('invideo.io'),es:'Ideas en videos para redes. Rápido sin conocimientos técnicos.',en:'Ideas to videos for social. Fast, no technical knowledge.',tags:['redes sociales','fácil','automático']},
+  {ab:'MX',n:'Minimax Video',url:'minimaxi.com',logo:gfav('minimaxi.com'),es:'Alta res con control narrativo y consistencia de personajes.',en:'High res with narrative control and character consistency.',tags:['alta res','narrativo','personajes']},
+  {ab:'WA',n:'Wan AI',url:'wan-ai.com',logo:gfav('wan-ai.com'),es:'Wan 2.2: generación de video open source de alta calidad.',en:'Wan 2.2: high quality open source video generation.',tags:['open source','Wan 2.2','calidad']},
+  {ab:'HV',n:'HiDream Video',url:'hidream.ai',logo:gfav('hidream.ai'),es:'Video generativo de HiDream. Alta fidelidad estética.',en:'HiDream generative video. High aesthetic fidelity.',tags:['HiDream','alta fidelidad','estético']},
+ ]},
+ {id:'C',es:{title:'EDICIÓN Y REPURPOSING DE VIDEO',sub:'Clipping IA · Shorts · Transcripción'},en:{title:'VIDEO EDITING & REPURPOSING',sub:'AI Clipping · Shorts · Transcription'},fr:{title:'MONTAGE ET RÉUTILISATION',sub:'Clipping IA · Shorts · Transcription'},pt:{title:'EDIÇÃO E REPURPOSING DE VÍDEO',sub:'Clipping IA · Shorts · Transcrição'},de:{title:'VIDEOBEARBEITUNG & REPURPOSING',sub:'KI-Clipping · Shorts · Transkription'},zh:{title:'视频编辑与二次创作',sub:'AI剪辑 · 短视频 · 转录'},yue:{title:'影片編輯與二次創作',sub:'AI剪片 · 短片 · 轉錄'},ja:{title:'動画編集とリパーパシング',sub:'AIクリッピング · ショート動画 · 文字起こし'},ko:{title:'비디오 편집 및 재가공',sub:'AI 클리핑 · 쇼츠 · 트랜스크립션'},ru:{title:'МОНТАЖ И ПЕРЕРАБОТКА ВИДЕО',sub:'ИИ-нарезка · Shorts · Транскрипция'},ar:{title:'تحرير الفيديو وإعادة الاستخدام',sub:'تقطيع بالذكاء الاصطناعي · شورتس · تفريغ نصي'},it:{title:'EDITING E RIUTILIZZO VIDEO',sub:'Clipping IA · Shorts · Trascrizione'},hi:{title:'वीडियो एडिटिंग और रीपर्पज़िंग',sub:'AI क्लिपिंग · शॉर्ट्स · ट्रांसक्रिप्शन'},hr:{title:'UREĐIVANJE I REPURPOSING VIDEA',sub:'AI izrezivanje · Shorts · Transkripcija'},tools:[
+  {ab:'DE',n:'Descript',url:'descript.com',logo:gfav('descript.com'),rating:'essential',es:'Edita video editando texto. Overdub, transcripción y repurposing.',en:'Edit video by editing text. Overdub, transcription and repurposing.',tags:['texto-a-edición','overdub','transcripción']},
+  {ab:'OP',n:'OpusClip',url:'opus.pro',logo:gfav('opus.pro'),rating:'essential',es:'Videos largos en clips virales. Virality score IA para TikTok/Reels.',en:'Long videos into viral clips. AI virality score for TikTok/Reels.',tags:['virality score','Shorts','TikTok']},
+  {ab:'KA',n:'Kapwing',url:'kapwing.com',logo:gfav('kapwing.com'),rating:'recommended',es:'Editor colaborativo con subtítulos auto y resizing multiplataforma.',en:'Collaborative editor with auto subtitles and cross-platform resizing.',tags:['colaborativo','subtítulos','resizing']},
+  {ab:'SU',n:'Submagic',url:'submagic.co',logo:gfav('submagic.co'),rating:'recommended',es:'Subtítulos animados y captions IA en segundos.',en:'Animated subtitles and AI captions in seconds.',tags:['subtítulos animados','captions','viral']},
+  {ab:'TY',n:'Typeframes',url:'typeframes.com',logo:gfav('typeframes.com'),es:'Videos animados de producto y marketing desde texto.',en:'Animated product and marketing videos from text.',tags:['producto','marketing','animado']},
+  {ab:'CC',n:'Captions.ai',url:'captions.ai',logo:gfav('captions.ai'),rating:'recommended',es:'Subtítulos, avatar IA y edición inteligente para creadores de contenido.',en:'Captions, AI avatar and smart editing for content creators.',tags:['subtítulos','avatar','creadores']},
+  {ab:'CL',n:'Clipchamp',url:'clipchamp.com',logo:gfav('clipchamp.com'),es:'Editor de video de Microsoft integrado en Windows 11. Fácil y gratuito.',en:'Microsoft video editor integrated in Windows 11. Easy and free.',tags:['Microsoft','Windows','gratuito','fácil']},
+ ]},
+ {id:'D',es:{title:'GENERACIÓN DE IMÁGENES',sub:'Text-to-Image · Arte IA · Open Source'},en:{title:'IMAGE GENERATION',sub:'Text-to-Image · AI Art · Open Source'},fr:{title:'GÉNÉRATION D\'IMAGES',sub:'Texte-en-image · Art IA'},pt:{title:'GERAÇÃO DE IMAGENS',sub:'Texto-para-Imagem · Arte IA'},de:{title:'BILDGENERIERUNG',sub:'Text-zu-Bild · KI-Kunst'},zh:{title:'图像生成',sub:'文本转图像 · AI艺术'},yue:{title:'圖像生成',sub:'文字轉圖像 · AI藝術 · 開源'},ja:{title:'画像生成',sub:'テキストから画像 · AIアート · オープンソース'},ko:{title:'이미지 생성',sub:'텍스트-이미지 · AI 아트 · 오픈소스'},ru:{title:'ГЕНЕРАЦИЯ ИЗОБРАЖЕНИЙ',sub:'Текст в изображение · ИИ-арт · Открытый код'},ar:{title:'إنشاء الصور',sub:'نص إلى صورة · فن الذكاء الاصطناعي · مفتوح المصدر'},it:{title:'GENERAZIONE DI IMMAGINI',sub:'Testo-a-Immagine · Arte IA · Open Source'},hi:{title:'इमेज जेनरेशन',sub:'टेक्स्ट-टू-इमेज · AI आर्ट · ओपन सोर्स'},hr:{title:'GENERIRANJE SLIKA',sub:'Tekst-u-sliku · AI umjetnost · Otvoreni kod'},tools:[
+  {ab:'MJ',n:'Midjourney',url:'midjourney.com',logo:gfav('midjourney.com'),rating:'essential',es:'Referente mundial en imágenes artísticas. V7 con coherencia y control.',en:'World reference in artistic images. V7 with coherence and control.',tags:['artístico','alta calidad','V7']},
+  {ab:'DA',n:'DALL-E 3',url:'openai.com/dall-e-3',logo:gfav('openai.com'),rating:'recommended',es:'Modelo OpenAI en ChatGPT. Excelente renderizado de texto en imagen.',en:'OpenAI model in ChatGPT. Excellent text rendering in images.',tags:['OpenAI','texto en imagen','ChatGPT']},
+  {ab:'AF',n:'Adobe Firefly',url:'firefly.adobe.com',logo:gfav('adobe.com'),rating:'recommended',es:'IA generativa en Adobe. Uso comercial 100% seguro. Generative Fill 3.',en:'Generative AI in Adobe. 100% safe commercial use. Generative Fill 3.',tags:['Adobe','comercial','Photoshop']},
+  {ab:'ID',n:'Ideogram',url:'ideogram.ai',logo:gfav('ideogram.ai'),rating:'recommended',es:'El mejor para tipografías y texto dentro de imágenes generadas.',en:'Best for typography and text within generated images.',tags:['tipografía','text rendering','logos']},
+  {ab:'LE',n:'Leonardo.Ai',url:'leonardo.ai',logo:gfav('leonardo.ai'),rating:'recommended',es:'LoRA, control de estilo y concept art para videojuegos.',en:'LoRA, style control and concept art for video games.',tags:['LoRA','game assets','estilo']},
+  {ab:'FX',n:'FLUX (BFL)',url:'bfl.ai',logo:gfav('bfl.ai'),rating:'recommended',es:'Modelo FLUX.1 Pro / Dev. Alta fidelidad. Base de muchas plataformas.',en:'FLUX.1 Pro / Dev model. High fidelity. Foundation of many platforms.',tags:['FLUX.1','alta fidelidad','open model']},
+  {ab:'IM',n:'Imagen 4',url:'deepmind.google/imagen',logo:gfav('google.com'),es:'Imagen 4 de Google con fotorrealismo extremo y texto perfecto.',en:'Google Imagen 4 with extreme photorealism and perfect text.',tags:['Google','fotorrealismo','Imagen 4']},
+  {ab:'RE',n:'Recraft V3',url:'recraft.ai',logo:gfav('recraft.ai'),rating:'recommended',es:'Vectores, íconos y logos con control preciso de estilo. Recraft V3.',en:'Vectors, icons and logos with precise style control. Recraft V3.',tags:['vectorial','SVG','logos']},
+  {ab:'MA',n:'Mage.Space',url:'mage.space',logo:gfav('mage.space'),es:'SD gratis y rápido con múltiples modelos.',en:'Free and fast SD with multiple models.',tags:['SD','gratis','rápido']},
+  {ab:'OA',n:'OpenArt',url:'openart.ai',logo:gfav('openart.ai'),es:'Multi-modelos para imagen, video y entrenamiento.',en:'Multi-models for image, video and training.',tags:['multi-modelo','studio','workflow']},
+  {ab:'CI',n:'Civitai',url:'civitai.com',logo:gfav('civitai.com'),rating:'recommended',es:'Hub de modelos open source. LoRAs y comunidad activa.',en:'Open source model hub. LoRAs and active community.',tags:['open source','LoRA','comunidad']},
+  {ab:'CF',n:'ComfyUI',url:'github.com/comfyanonymous/ComfyUI',logo:gfav('github.com'),rating:'recommended',es:'Interfaz de nodos para Stable Diffusion. Máximo control.',en:'Node interface for Stable Diffusion. Maximum control.',tags:['nodos','local','open source']},
+  {ab:'HD',n:'HiDream',url:'hidream.ai',logo:gfav('hidream.ai'),es:'Modelo de imagen de alta fidelidad artística. Open source.',en:'High artistic fidelity image model. Open source.',tags:['HiDream','alta fidelidad','open source']},
+  {ab:'DS',n:'DreamStudio',url:'dreamstudio.ai',logo:gfav('dreamstudio.ai'),es:'SD accesible por StabilityAI. Stable Diffusion 3.5 Medium.',en:'SD by StabilityAI. Stable Diffusion 3.5 Medium.',tags:['SD','StabilityAI','SD3.5']},
+ ]},
+ {id:'E',es:{title:'AVATARES Y PRESENTADORES IA',sub:'Lip-Sync · Avatares Digitales'},en:{title:'AI AVATARS & PRESENTERS',sub:'Lip-Sync · Digital Avatars'},fr:{title:'AVATARS ET PRÉSENTATEURS IA',sub:'Lip-Sync · Avatars numériques'},pt:{title:'AVATARES E APRESENTADORES IA',sub:'Lip-Sync · Avatares Digitais'},de:{title:'KI-AVATARE & MODERATOREN',sub:'Lip-Sync · Digitale Avatare'},zh:{title:'AI虚拟形象与主持人',sub:'口型同步 · 数字人'},yue:{title:'AI虛擬形象與主持人',sub:'口型同步 · 數碼人'},ja:{title:'AIアバター＆プレゼンター',sub:'リップシンク · デジタルアバター'},ko:{title:'AI 아바타 및 발표자',sub:'립싱크 · 디지털 아바타'},ru:{title:'ИИ-АВАТАРЫ И ПРЕЗЕНТЕРЫ',sub:'Синхронизация губ · Цифровые аватары'},ar:{title:'الصور الرمزية ومقدمو العرض بالذكاء الاصطناعي',sub:'مزامنة الشفاه · صور رمزية رقمية'},it:{title:'AVATAR E PRESENTATORI IA',sub:'Lip-Sync · Avatar Digitali'},hi:{title:'AI अवतार और प्रस्तुतकर्ता',sub:'लिप-सिंक · डिजिटल अवतार'},hr:{title:'AI AVATARI I VODITELJI',sub:'Sinkronizacija usana · Digitalni avatari'},tools:[
+  {ab:'HG',n:'HeyGen',url:'heygen.com',logo:gfav('heygen.com'),rating:'essential',es:'Avatares hiperrealistas con lip-sync perfecto. 130+ idiomas. Video Translate.',en:'Hyper-realistic avatars with perfect lip-sync. 130+ languages. Video Translate.',tags:['avatar','lip-sync','130 idiomas']},
+  {ab:'SY',n:'Synthesia',url:'synthesia.io',logo:gfav('synthesia.io'),rating:'recommended',es:'Videos corporativos con avatares IA en 230+ idiomas. Sin cámara.',en:'Corporate videos with AI avatars in 230+ languages. No camera.',tags:['enterprise','230 idiomas','sin cámara']},
+  {ab:'DI',n:'D-ID',url:'d-id.com',logo:gfav('d-id.com'),rating:'recommended',es:'Presentadores digitales desde foto + texto. Streaming real.',en:'Digital presenters from photo + text. Real-time streaming.',tags:['foto-to-video','digital','streaming']},
+  {ab:'HE',n:'Hedra',url:'hedra.com',logo:gfav('hedra.com'),rating:'recommended',es:'Personajes hablantes desde imagen + audio. Character-3 model.',en:'Talking characters from image + audio. Character-3 model.',tags:['character video','audio-to-video','talking head']},
+  {ab:'GY',n:'Gooey.AI Lipsync',url:'gooey.ai',logo:gfav('gooey.ai'),es:'Lip-sync con input de audio. API para integraciones.',en:'Lip-sync with audio input. API for integrations.',tags:['lip-sync','animación','API']},
+  {ab:'RP',n:'Rephrase.ai',url:'rephrase.ai',logo:gfav('rephrase.ai'),es:'Avatares digitales para marketing y comunicación corporativa.',en:'Digital avatars for marketing and corporate communication.',tags:['marketing','corporativo','avatar']},
+ ]},
+ {id:'F',es:{title:'AUDIO, VOZ Y MÚSICA IA',sub:'TTS · Clonación de Voz · Música Generativa'},en:{title:'AI AUDIO, VOICE & MUSIC',sub:'TTS · Voice Cloning · Generative Music'},fr:{title:'AUDIO, VOIX ET MUSIQUE IA',sub:'TTS · Clonage de voix · Musique générative'},pt:{title:'ÁUDIO, VOZ E MÚSICA IA',sub:'TTS · Clonagem de Voz · Música Generativa'},de:{title:'KI-AUDIO, STIMME & MUSIK',sub:'TTS · Stimmklonen · Generative Musik'},zh:{title:'AI音频、声音与音乐',sub:'TTS · 声音克隆 · 生成音乐'},yue:{title:'AI音頻、聲音與音樂',sub:'TTS · 聲音複製 · 生成音樂'},ja:{title:'AIオーディオ、音声＆音楽',sub:'TTS · 音声クローン · 生成音楽'},ko:{title:'AI 오디오, 음성 및 음악',sub:'TTS · 음성 복제 · 생성 음악'},ru:{title:'ИИ-АУДИО, ГОЛОС И МУЗЫКА',sub:'TTS · Клонирование голоса · Генеративная музыка'},ar:{title:'الصوت والموسيقى بالذكاء الاصطناعي',sub:'تحويل النص إلى كلام · استنساخ الصوت · موسيقى توليدية'},it:{title:'AUDIO, VOCE E MUSICA IA',sub:'TTS · Clonazione Vocale · Musica Generativa'},hi:{title:'AI ऑडियो, आवाज़ और संगीत',sub:'TTS · वॉइस क्लोनिंग · जेनरेटिव संगीत'},hr:{title:'AI AUDIO, GLAS I GLAZBA',sub:'TTS · Kloniranje glasa · Generativna glazba'},tools:[
+  {ab:'EL',n:'ElevenLabs',url:'elevenlabs.io',logo:gfav('elevenlabs.io'),rating:'essential',es:'El mejor TTS y clonación de voz. Multilingual V2. Dubbing Studio.',en:'The best TTS and voice cloning. Multilingual V2. Dubbing Studio.',tags:['clonación','TTS','multilingual']},
+  {ab:'SN',n:'Suno',url:'suno.com',logo:gfav('suno.com'),rating:'essential',es:'Canciones completas con letra, melodía y producción. Suno v4.',en:'Complete songs with AI-generated lyrics, melody and production. Suno v4.',tags:['letras','géneros','música completa']},
+  {ab:'UD',n:'Udio',url:'udio.com',logo:gfav('udio.com'),rating:'recommended',es:'Canciones de alta calidad con letras y múltiples géneros.',en:'High quality songs with lyrics and multiple genres.',tags:['música','alta calidad','géneros']},
+  {ab:'RA',n:'Rask AI',url:'rask.ai',logo:gfav('rask.ai'),rating:'recommended',es:'Doblaje y localización en 130+ idiomas con clonación de voz.',en:'Dubbing and localization in 130+ languages with voice cloning.',tags:['localización','130 idiomas','doblaje']},
+  {ab:'MO',n:'Moises App',url:'moises.ai',logo:gfav('moises.ai'),rating:'recommended',es:'Separa vocales e instrumentos de cualquier canción. AI Mixer.',en:'Separates vocals and instruments from any song. AI Mixer.',tags:['stems','separación','músicos']},
+  {ab:'TU',n:'TurboScribe',url:'turboscribe.ai',logo:gfav('turboscribe.ai'),rating:'recommended',es:'Transcripción precisa de audio y video. Multilenguaje.',en:'Accurate audio and video transcription. Multilingual.',tags:['transcripción','subtítulos','audio-to-text']},
+  {ab:'WH',n:'Whisper',url:'openai.com/whisper',logo:gfav('openai.com'),rating:'recommended',es:'Modelo open source de OpenAI para reconocimiento de voz. Large V3.',en:'OpenAI open source speech recognition model. Large V3.',tags:['reconocimiento voz','open source','Large V3']},
+  {ab:'CD',n:'CloneDub',url:'clonedub.com',logo:gfav('clonedub.com'),es:'Dobla videos preservando la voz original del hablante.',en:'Dubs videos preserving the speaker\'s original voice.',tags:['doblaje','voz original','podcast']},
+  {ab:'MY',n:'MyVocal.ai',url:'myvocal.ai',logo:gfav('myvocal.ai'),es:'Clona voces para canto o TTS. Gratuito y accesible.',en:'Clones voices for singing or TTS. Free and accessible.',tags:['canto','TTS','gratis']},
+  {ab:'MU',n:'Mubert',url:'mubert.com',logo:gfav('mubert.com'),es:'Música ambient sin copyright para videos y proyectos.',en:'Copyright-free ambient music for videos and projects.',tags:['ambient','sin copyright','royalty-free']},
+  {ab:'SB',n:'Stable Audio',url:'stability.ai/stable-audio',logo:gfav('stability.ai'),es:'Música generativa open source de StabilityAI. Alta calidad.',en:'StabilityAI open source generative music. High quality.',tags:['música generativa','StabilityAI','open source']},
+  {ab:'SV',n:'Speechify',url:'speechify.com',logo:gfav('speechify.com'),es:'TTS natural para leer cualquier texto en voz ultra-realista.',en:'Natural TTS to read any text in ultra-realistic voice.',tags:['TTS','lectura','natural','productividad']},
+  {ab:'NR',n:'NaturalReaders',url:'naturalreaders.com',logo:gfav('naturalreaders.com'),es:'Lector de texto a voz online. Voces naturales para documentos, PDFs y ebooks.',en:'Online text-to-speech reader. Natural voices for documents, PDFs and ebooks.',tags:['TTS','lectura','PDF','accesibilidad']},
+ ]},
+ {id:'G',es:{title:'CODING Y DESARROLLO IA',sub:'IDEs con IA · Vibe Coding · Apps'},en:{title:'AI CODING & DEVELOPMENT',sub:'AI IDEs · Vibe Coding · App Generators'},fr:{title:'CODING ET DÉVELOPPEMENT IA',sub:'IDEs avec IA · Vibe Coding · Apps'},pt:{title:'CODING E DESENVOLVIMENTO IA',sub:'IDEs com IA · Vibe Coding · Apps'},de:{title:'KI-CODING & ENTWICKLUNG',sub:'KI-IDEs · Vibe Coding · App-Generatoren'},zh:{title:'AI编程与开发',sub:'AI集成IDE · 氛围编程 · 应用生成'},yue:{title:'AI編程與開發',sub:'AI IDE · Vibe Coding · 應用程式生成'},ja:{title:'AIコーディング＆開発',sub:'AI IDE · バイブコーディング · アプリ生成'},ko:{title:'AI 코딩 및 개발',sub:'AI IDE · 바이브 코딩 · 앱 생성기'},ru:{title:'ИИ-КОДИНГ И РАЗРАБОТКА',sub:'ИИ-IDE · Vibe Coding · Генераторы приложений'},ar:{title:'البرمجة والتطوير بالذكاء الاصطناعي',sub:'بيئات تطوير ذكية · Vibe Coding · مولدات التطبيقات'},it:{title:'CODING E SVILUPPO IA',sub:'IDE con IA · Vibe Coding · Generatori di App'},hi:{title:'AI कोडिंग और डेवलपमेंट',sub:'AI IDE · वाइब कोडिंग · ऐप जेनरेटर'},hr:{title:'AI KODIRANJE I RAZVOJ',sub:'AI IDE-ovi · Vibe Coding · Generatori aplikacija'},tools:[
+  {ab:'CU',n:'Cursor',url:'cursor.com',logo:gfav('cursor.com'),rating:'essential',es:'IDE #1 para vibe coding. Comprende y edita todo el codebase. Cursor Tab.',en:'#1 IDE for vibe coding. Understands and edits the entire codebase. Cursor Tab.',tags:['IDE','codebase','vibe coding']},
+  {ab:'GH',n:'GitHub Copilot',url:'github.com/copilot',logo:gfav('github.com'),rating:'essential',es:'El más usado. VS Code y JetBrains. Copilot Workspace y agent mode.',en:'The most used. VS Code and JetBrains. Copilot Workspace and agent mode.',tags:['VS Code','autocompletado','GitHub']},
+  {ab:'BN',n:'Bolt.new',url:'bolt.new',logo:gfav('bolt.new'),rating:'essential',es:'Apps web completas desde texto. Zero-setup. StackBlitz. Bolt DIY.',en:'Complete web apps from text. Zero-setup. StackBlitz. Bolt DIY.',tags:['web app','StackBlitz','full-stack']},
+  {ab:'LV',n:'Lovable',url:'lovable.dev',logo:gfav('lovable.dev'),rating:'recommended',es:'Apps completas desde texto natural. Prototipos funcionales con Supabase.',en:'Complete apps from natural language. Functional prototypes with Supabase.',tags:['full app','prototipo','Supabase']},
+  {ab:'V0',n:'v0',url:'v0.dev',logo:gfav('v0.dev'),rating:'recommended',es:'Componentes React + Tailwind desde texto. Por Vercel. v0 Pro.',en:'React + Tailwind components from text. By Vercel. v0 Pro.',tags:['React','Tailwind','Vercel']},
+  {ab:'CC',n:'Claude Code',url:'claude.ai/code',logo:gfav('claude.ai'),rating:'recommended',es:'Agente Anthropic en terminal. Modifica codebases completos.',en:'Anthropic\'s terminal agent. Modifies complete codebases.',tags:['terminal','Anthropic','CLI']},
+  {ab:'RP',n:'Replit',url:'replit.com',logo:gfav('replit.com'),rating:'recommended',es:'Editor online con IA integrada: crea, ejecuta y deploya.',en:'Online editor with integrated AI: create, run and deploy.',tags:['online','deploy','ejecutar']},
+  {ab:'WN',n:'Windsurf',url:'windsurf.com',logo:gfav('windsurf.com'),rating:'recommended',es:'IDE IA de Codeium. Cascade agent. Flujo completo de desarrollo.',en:'Codeium AI IDE. Cascade agent. Complete development flow.',tags:['IDE','Codeium','Cascade']},
+  {ab:'CD2',n:'Codeium',url:'codeium.com',logo:gfav('codeium.com'),es:'Autocompletado gratuito. 70+ lenguajes. Alternativa Copilot.',en:'Free autocomplete. 70+ languages. Copilot alternative.',tags:['gratis','70 lenguajes','autocompletado']},
+  {ab:'TB',n:'Tabnine',url:'tabnine.com',logo:gfav('tabnine.com'),es:'IA de código con privacidad. Modelo local enterprise.',en:'Code AI focused on privacy. Local enterprise model.',tags:['privacidad','local','enterprise']},
+  {ab:'ZE',n:'Zed Editor',url:'zed.dev',logo:gfav('zed.dev'),es:'Editor Rust ultra-rápido con IA y colaboración en tiempo real.',en:'Ultra-fast Rust editor with AI and real-time collaboration.',tags:['Rust','rápido','colaboración']},
+  {ab:'SW',n:'Same.dev',url:'same.dev',logo:gfav('same.dev'),es:'Clona y edita cualquier sitio web con IA en segundos.',en:'Clone and edit any website with AI in seconds.',tags:['clone','web','rápido']},
+ ]},
+ {id:'H',es:{title:'AGENTES Y AUTOMATIZACIÓN',sub:'Multi-Agente · No-Code · Local LLM'},en:{title:'AGENTS & AUTOMATION',sub:'Multi-Agent · No-Code · Local LLM'},fr:{title:'AGENTS ET AUTOMATISATION',sub:'Multi-Agent · Sans code · LLM local'},pt:{title:'AGENTES E AUTOMAÇÃO',sub:'Multi-Agente · Sem Código · LLM Local'},de:{title:'AGENTEN & AUTOMATISIERUNG',sub:'Multi-Agent · No-Code · Lokales LLM'},zh:{title:'智能体与自动化',sub:'多智能体 · 无代码 · 本地LLM'},yue:{title:'代理與自動化',sub:'多代理 · 無代碼 · 本地LLM'},ja:{title:'エージェント＆オートメーション',sub:'マルチエージェント · ノーコード · ローカルLLM'},ko:{title:'에이전트 및 자동화',sub:'멀티 에이전트 · 노코드 · 로컬 LLM'},ru:{title:'АГЕНТЫ И АВТОМАТИЗАЦИЯ',sub:'Мульти-агенты · Без кода · Локальные LLM'},ar:{title:'الوكلاء والأتمتة',sub:'متعدد الوكلاء · بدون كود · LLM محلي'},it:{title:'AGENTI E AUTOMAZIONE',sub:'Multi-Agente · No-Code · LLM Locale'},hi:{title:'एजेंट और ऑटोमेशन',sub:'मल्टी-एजेंट · नो-कोड · लोकल LLM'},hr:{title:'AGENTI I AUTOMATIZACIJA',sub:'Multi-agent · Bez koda · Lokalni LLM'},tools:[
+  {ab:'ZA',n:'Zapier',url:'zapier.com',logo:gfav('zapier.com'),rating:'essential',es:'Líder en automatización. 7000+ apps. Agentes con razonamiento IA.',en:'Automation leader. 7000+ apps. Agents with AI reasoning.',tags:['no-code','7000 apps','workflows']},
+  {ab:'MK',n:'Make',url:'make.com',logo:gfav('make.com'),rating:'essential',es:'Automatización visual avanzada. Alternativa potente a Zapier.',en:'Advanced visual automation. Powerful Zapier alternative.',tags:['visual','flujos complejos','avanzado']},
+  {ab:'N8',n:'n8n',url:'n8n.io',logo:gfav('n8n.io'),rating:'recommended',es:'Automatización open source self-hosted. Máximo control y privacidad.',en:'Self-hosted open source automation. Maximum control and privacy.',tags:['open source','self-hosted','privacidad']},
+  {ab:'GQ',n:'Groq',url:'groq.com',logo:gfav('groq.com'),rating:'recommended',es:'Inferencia ultra-rápida con LPU. 500+ tokens por segundo.',en:'Ultra-fast inference with LPU. 500+ tokens per second.',tags:['velocidad','LPU','Llama']},
+  {ab:'LMS',n:'LM Studio',url:'lmstudio.ai',logo:gfav('lmstudio.ai'),rating:'recommended',es:'LLMs en local. 100% privado. Funciona sin internet.',en:'Local LLMs. 100% private. Works without internet.',tags:['local','LLM','privado']},
+  {ab:'AG',n:'AutoGen Studio',url:'microsoft.github.io/autogen',logo:gfav('microsoft.com'),rating:'recommended',es:'Framework multi-agente de Microsoft. Open source.',en:'Microsoft multi-agent framework. Open source.',tags:['multi-agente','framework','Microsoft']},
+  {ab:'BL',n:'Bland AI',url:'bland.ai',logo:gfav('bland.ai'),es:'Agentes de voz para llamadas telefónicas autónomas.',en:'Voice agents for fully autonomous phone calls.',tags:['voz','llamadas','agente autónomo']},
+  {ab:'JA',n:'Jan AI',url:'jan.ai',logo:gfav('jan.ai'),es:'Gestor IA local open source. API compatible OpenAI.',en:'Open source local AI manager. OpenAI-compatible API.',tags:['open source','local','API local']},
+  {ab:'PI',n:'Pinokio',url:'pinokio.computer',logo:gfav('pinokio.computer'),es:'Instala scripts de IA con 1 clic. Sin terminal.',en:'Install AI scripts with 1 click. No terminal needed.',tags:['1-clic','scripts','local']},
+  {ab:'CF2',n:'Chatfuel',url:'chatfuel.com',logo:gfav('chatfuel.com'),es:'Chatbots no-code para WhatsApp e Instagram.',en:'No-code chatbots for WhatsApp and Instagram.',tags:['chatbots','WhatsApp','no-code']},
+  {ab:'AB',n:'Abacus.AI',url:'abacus.ai',logo:gfav('abacus.ai'),es:'Plataforma enterprise IA end-to-end. MLOps.',en:'End-to-end AI enterprise platform. MLOps.',tags:['enterprise','MLOps','end-to-end']},
+  {ab:'AW',n:'Activepieces',url:'activepieces.com',logo:gfav('activepieces.com'),es:'Automatización open source. Alternativa a Zapier self-hosted.',en:'Open source automation. Self-hosted Zapier alternative.',tags:['open source','automatización','self-hosted']},
+ ]},
+ {id:'I',es:{title:'PRODUCTIVIDAD Y ESCRITURA',sub:'RAG · Presentaciones · Copy · Notas'},en:{title:'PRODUCTIVITY & WRITING',sub:'RAG · Presentations · Copy · Notes'},fr:{title:'PRODUCTIVITÉ ET RÉDACTION',sub:'RAG · Présentations · Copywriting · Notes'},pt:{title:'PRODUTIVIDADE E ESCRITA',sub:'RAG · Apresentações · Copywriting · Notas'},de:{title:'PRODUKTIVITÄT & SCHREIBEN',sub:'RAG · Präsentationen · Texterstellung · Notizen'},zh:{title:'生产力与写作',sub:'RAG · 演示文稿 · 文案 · 笔记'},yue:{title:'生產力與寫作',sub:'RAG · 簡報 · 文案 · 筆記'},ja:{title:'生産性＆ライティング',sub:'RAG · プレゼン · コピー · ノート'},ko:{title:'생산성 및 글쓰기',sub:'RAG · 프레젠테이션 · 카피 · 노트'},ru:{title:'ПРОДУКТИВНОСТЬ И ПИСЬМО',sub:'RAG · Презентации · Копирайтинг · Заметки'},ar:{title:'الإنتاجية والكتابة',sub:'RAG · العروض التقديمية · الكتابة · الملاحظات'},it:{title:'PRODUTTIVITÀ E SCRITTURA',sub:'RAG · Presentazioni · Copywriting · Note'},hi:{title:'उत्पादकता और लेखन',sub:'RAG · प्रेज़ेंटेशन · कॉपी · नोट्स'},hr:{title:'PRODUKTIVNOST I PISANJE',sub:'RAG · Prezentacije · Copywriting · Bilješke'},tools:[
+  {ab:'NL',n:'NotebookLM',url:'notebooklm.google',logo:gfav('notebooklm.google'),rating:'essential',es:'RAG sobre tus documentos. Genera podcasts automáticos. Google.',en:'RAG on your documents. Generates automatic podcasts. By Google.',tags:['documentos','RAG','podcast']},
+  {ab:'GA',n:'Gamma',url:'gamma.app',logo:gfav('gamma.app'),rating:'essential',es:'Presentaciones y webs generadas con IA al instante.',en:'Presentations and websites generated with AI instantly.',tags:['presentaciones','slides','web']},
+  {ab:'NO',n:'Notion AI',url:'notion.so',logo:gfav('notion.so'),rating:'recommended',es:'IA en Notion. Escribe, resume, traduce y analiza.',en:'AI in Notion. Write, summarize, translate and analyze.',tags:['Notion','escritura','resumen']},
+  {ab:'NA',n:'Napkin AI',url:'napkin.ai',logo:gfav('napkin.ai'),rating:'recommended',es:'Texto en diagramas y visualizaciones de negocios.',en:'Text to diagrams and business visualizations.',tags:['diagramas','visualización','negocios']},
+  {ab:'OT',n:'Otter.ai',url:'otter.ai',logo:gfav('otter.ai'),rating:'recommended',es:'Notas automáticas en reuniones. Zoom, Teams, Meet.',en:'Automatic meeting notes. Zoom, Teams, Meet.',tags:['reuniones','transcripción','Zoom']},
+  {ab:'JS',n:'Jasper',url:'jasper.ai',logo:gfav('jasper.ai'),rating:'recommended',es:'Marketing de contenidos: long-form, ads, emails y SEO.',en:'Content marketing: long-form, ads, emails and SEO.',tags:['marketing','long-form','SEO']},
+  {ab:'CP',n:'Copy.ai',url:'copy.ai',logo:gfav('copy.ai'),rating:'recommended',es:'Copy rápido: hooks, CTAs, emails y campañas.',en:'Fast copy: hooks, CTAs, emails and campaigns.',tags:['hooks','CTA','emails']},
+  {ab:'RL',n:'Relume',url:'relume.io',logo:gfav('relume.io'),es:'Sitemaps, wireframes y componentes web con IA.',en:'AI-generated sitemaps, wireframes and web components.',tags:['sitemap','wireframe','Webflow']},
+  {ab:'WS',n:'Writesonic',url:'writesonic.com',logo:gfav('writesonic.com'),es:'SEO, artículos, landing pages y WordPress.',en:'SEO, articles, landing pages and WordPress.',tags:['SEO','artículos','WordPress']},
+  {ab:'RW',n:'Rows',url:'rows.com',logo:gfav('rows.com'),es:'Hoja de cálculo con IA integrada y datos vivos.',en:'Spreadsheet with integrated AI and live data.',tags:['spreadsheet','datos vivos','análisis']},
+  {ab:'WB',n:'Websim.ai',url:'websim.ai',logo:gfav('websim.ai'),es:'Genera sitios web y apps desde lenguaje natural.',en:'Generates websites and apps from natural language.',tags:['web gen','prototipado','generativo']},
+  {ab:'SW2',n:'Sudowrite',url:'sudowrite.com',logo:gfav('sudowrite.com'),es:'Escritura creativa para novelistas y guionistas.',en:'Creative writing for novelists and screenwriters.',tags:['novelas','guiones','narrativa']},
+  {ab:'FR2',n:'Fireflies.ai',url:'fireflies.ai',logo:gfav('fireflies.ai'),rating:'recommended',es:'Transcripción y resumen automático de reuniones con IA.',en:'Automatic AI meeting transcription and summarization.',tags:['reuniones','transcripción','resumen']},
+ ]},
+ {id:'J',es:{title:'DISEÑO, VECTORES Y LOGOS',sub:'SVG · Branding · UI Design'},en:{title:'DESIGN, VECTORS & LOGOS',sub:'SVG · Branding · UI Design'},fr:{title:'DESIGN, VECTEURS ET LOGOS',sub:'SVG · Branding · UI Design'},pt:{title:'DESIGN, VETORES E LOGOS',sub:'SVG · Branding · UI Design'},de:{title:'DESIGN, VEKTOREN & LOGOS',sub:'SVG · Branding · UI-Design'},zh:{title:'设计、矢量与Logo',sub:'SVG · 品牌 · UI设计'},yue:{title:'設計、矢量圖與標誌',sub:'SVG · 品牌 · UI設計'},ja:{title:'デザイン、ベクター＆ロゴ',sub:'SVG · ブランディング · UIデザイン'},ko:{title:'디자인, 벡터 및 로고',sub:'SVG · 브랜딩 · UI 디자인'},ru:{title:'ДИЗАЙН, ВЕКТОРЫ И ЛОГОТИПЫ',sub:'SVG · Брендинг · UI-дизайн'},ar:{title:'التصميم والمتجهات والشعارات',sub:'SVG · العلامة التجارية · تصميم واجهات'},it:{title:'DESIGN, VETTORI E LOGHI',sub:'SVG · Branding · UI Design'},hi:{title:'डिज़ाइन, वेक्टर और लोगो',sub:'SVG · ब्रांडिंग · UI डिज़ाइन'},hr:{title:'DIZAJN, VEKTORI I LOGOTIPI',sub:'SVG · Branding · UI dizajn'},tools:[
+  {ab:'CA',n:'Canva',url:'canva.com',logo:gfav('canva.com'),rating:'essential',es:'La plataforma de diseño más usada. Plantillas e IA generativa.',en:'The most used design platform. Templates and generative AI.',tags:['diseño','plantillas','branding']},
+  {ab:'FG',n:'Figma',url:'figma.com',logo:gfav('figma.com'),rating:'essential',es:'UI/UX colaborativo profesional. Plugins IA, Make Designs y prototipos.',en:'Professional collaborative UI/UX. AI plugins, Make Designs and prototypes.',tags:['UI/UX','colaborativo','prototipado']},
+  {ab:'AE',n:'Adobe Express',url:'express.adobe.com',logo:gfav('adobe.com'),rating:'recommended',es:'Diseño rápido Adobe. Logos, redes y marketing.',en:'Adobe quick design. Logos, social media and marketing.',tags:['Adobe','logos','plantillas']},
+  {ab:'VT',n:'Vectorizer.AI',url:'vectorizer.ai',logo:gfav('vectorizer.ai'),rating:'recommended',es:'PNG/JPG a SVG vectorial de alta calidad automáticamente.',en:'PNG/JPG to high-quality SVG vector automatically.',tags:['PNG-to-SVG','vectorización','alta calidad']},
+  {ab:'LA',n:'Lovart',url:'lovart.ai',logo:gfav('lovart.ai'),es:'Thumbnails profesionales mediante chat IA.',en:'Professional thumbnails through AI chat.',tags:['thumbnails','YouTube','agente diseño']},
+  {ab:'LO',n:'Looka',url:'looka.com',logo:gfav('looka.com'),rating:'recommended',es:'Logos y branding completo con kit de marca por IA.',en:'Logos and complete branding with AI-generated brand kit.',tags:['logos','branding','kit de marca']},
+  {ab:'RC',n:'Recraft',url:'recraft.ai',logo:gfav('recraft.ai'),rating:'recommended',es:'Vectores, íconos y logos con control de estilo. Recraft V3.',en:'Vectors, icons and logos with style control. Recraft V3.',tags:['vectorial','SVG','iconos']},
+  {ab:'SV2',n:'SVGConverter',url:'svgconverter.app',logo:gfav('svgconverter.app'),es:'Vectorización gratuita online. Sin registro.',en:'Free online vectorization. No registration.',tags:['SVG','gratis','conversión']},
+  {ab:'GS',n:'Galileo AI',url:'usegalileo.ai',logo:gfav('usegalileo.ai'),es:'UI de alta fidelidad generada por IA desde texto.',en:'High-fidelity UI generated by AI from text.',tags:['UI design','text-to-UI','Figma']},
+ ]},
+ {id:'K',es:{title:'ECOSISTEMA GOOGLE IA',sub:'Gemini · Firebase · Veo · Flow'},en:{title:'GOOGLE AI ECOSYSTEM',sub:'Gemini · Firebase · Veo · Flow'},fr:{title:'ÉCOSYSTÈME GOOGLE IA',sub:'Gemini · Firebase · Veo · Flow'},pt:{title:'ECOSSISTEMA GOOGLE IA',sub:'Gemini · Firebase · Veo · Flow'},de:{title:'GOOGLE-KI-ÖKOSYSTEM',sub:'Gemini · Firebase · Veo · Flow'},zh:{title:'谷歌AI生态系统',sub:'Gemini · Firebase · Veo · Flow'},yue:{title:'Google AI生態系統',sub:'Gemini · Firebase · Veo · Flow'},ja:{title:'Google AIエコシステム',sub:'Gemini · Firebase · Veo · Flow'},ko:{title:'Google AI 생태계',sub:'Gemini · Firebase · Veo · Flow'},ru:{title:'ЭКОСИСТЕМА GOOGLE ИИ',sub:'Gemini · Firebase · Veo · Flow'},ar:{title:'نظام Google AI',sub:'Gemini · Firebase · Veo · Flow'},it:{title:'ECOSISTEMA GOOGLE IA',sub:'Gemini · Firebase · Veo · Flow'},hi:{title:'Google AI इकोसिस्टम',sub:'Gemini · Firebase · Veo · Flow'},hr:{title:'GOOGLE AI EKOSUSTAV',sub:'Gemini · Firebase · Veo · Flow'},tools:[
+  {ab:'GM',n:'Gemini',url:'gemini.google.com',logo:gfav('gemini.google.com'),rating:'essential',es:'Asistente multimodal de Google. Drive, Docs, Gmail. 2M tokens.',en:'Google\'s multimodal assistant. Drive, Docs, Gmail. 2M tokens.',tags:['multimodal','Google','2M tokens']},
+  {ab:'NB',n:'NotebookLM',url:'notebooklm.google',logo:gfav('notebooklm.google'),rating:'essential',es:'RAG sobre documentos. Podcasts automáticos. NotebookLM Plus.',en:'RAG on documents. Automatic podcasts. NotebookLM Plus.',tags:['RAG','documentos','podcast']},
+  {ab:'AS2',n:'AI Studio',url:'aistudio.google.com',logo:gfav('aistudio.google.com'),rating:'recommended',es:'Prototipado rápido con Gemini API. Soporte Grounding y Live API.',en:'Rapid prototyping with Gemini API. Grounding and Live API support.',tags:['Gemini API','prototipado','Live API']},
+  {ab:'GF',n:'Google Flow',url:'labs.google/flow',logo:gfav('labs.google'),rating:'recommended',es:'Editor video IA. Veo 3 + Imagen 4 + audio nativo.',en:'AI video editor. Veo 3 + Imagen 4 + native audio.',tags:['Veo 3','Imagen 4','editor video']},
+  {ab:'FB2',n:'Firebase Studio',url:'firebase.google.com',logo:gfav('firebase.google.com'),es:'Apps full-stack con IA asistida. Firebase Genkit.',en:'Full-stack apps with AI assistance. Firebase Genkit.',tags:['full-stack','Firebase','Genkit']},
+  {ab:'ST2',n:'Stitch',url:'stitch.withgoogle.com',logo:gfav('google.com'),es:'Diseña interfaces de alta fidelidad con IA generativa de Google.',en:'Design high-fidelity interfaces with Google\'s generative AI.',tags:['UI design','generativo','text-to-UI']},
+  {ab:'GL2',n:'Google Labs/fx',url:'labs.google/fx',logo:gfav('labs.google'),es:'Experimentos IA de Google en acceso anticipado.',en:'Google AI experiments in early access.',tags:['experimental','labs','early access']},
+  {ab:'DV',n:'Dev Library',url:'devlibrary.withgoogle.com',logo:gfav('google.com'),es:'Proyectos y recursos para devs con tecnología Google.',en:'Projects and resources for devs with Google technology.',tags:['recursos','proyectos','comunidad']},
+ ]},
+ {id:'L',es:{title:'NO-CODE Y APPS CON IA',sub:'Visual Builder · Zero-Code · Mobile'},en:{title:'NO-CODE & AI APPS',sub:'Visual Builder · Zero-Code · Mobile'},fr:{title:'SANS CODE ET APPS IA',sub:'Visual Builder · Zéro code · Mobile'},pt:{title:'SEM CÓDIGO E APPS COM IA',sub:'Visual Builder · Zero-Code · Mobile'},de:{title:'NO-CODE UND KI-APPS',sub:'Visual Builder · Zero-Code · Mobile'},zh:{title:'无代码与AI应用',sub:'可视化构建器 · 零代码 · 移动端'},yue:{title:'無程式碼與AI應用程式',sub:'視覺化建構工具 · 零程式碼 · 行動裝置'},ja:{title:'ノーコード＆AIアプリ',sub:'ビジュアルビルダー · ゼロコード · モバイル'},ko:{title:'노코드 및 AI 앱',sub:'비주얼 빌더 · 제로코드 · 모바일'},ru:{title:'NO-CODE И ИИ-ПРИЛОЖЕНИЯ',sub:'Визуальный конструктор · Без кода · Мобильные'},ar:{title:'بدون كود وتطبيقات الذكاء الاصطناعي',sub:'منشئ بصري · بدون كود · للهاتف المحمول'},it:{title:'NO-CODE E APP IA',sub:'Visual Builder · Zero-Code · Mobile'},hi:{title:'नो-कोड और AI ऐप्स',sub:'विज़ुअल बिल्डर · ज़ीरो-कोड · मोबाइल'},hr:{title:'NO-CODE I AI APLIKACIJE',sub:'Vizualni izrađivač · Bez koda · Mobilno'},tools:[
+  {ab:'WF',n:'Webflow',url:'webflow.com',logo:gfav('webflow.com'),rating:'essential',es:'Sitios responsive sin código. CMS, eCommerce y Webflow IA.',en:'Responsive sites without code. CMS, eCommerce and Webflow AI.',tags:['no-code','responsive','CMS']},
+  {ab:'FF',n:'FlutterFlow',url:'flutterflow.io',logo:gfav('flutterflow.io'),rating:'recommended',es:'Apps móviles y web con Flutter. No-code de alta potencia.',en:'Mobile and web apps with Flutter. High-power no-code.',tags:['Flutter','mobile','visual builder']},
+  {ab:'FR3',n:'Framer',url:'framer.com',logo:gfav('framer.com'),rating:'recommended',es:'Sitios interactivos con IA. Animaciones y publicación directa.',en:'Interactive sites with AI. Animations and direct publishing.',tags:['diseño web','interactivo','animaciones']},
+  {ab:'GD',n:'Glide',url:'glideapps.com',logo:gfav('glideapps.com'),rating:'recommended',es:'Apps móviles desde Google Sheets sin código.',en:'Mobile apps from Google Sheets without code.',tags:['Sheets','móvil','no-code']},
+  {ab:'GI',n:'Galileo AI',url:'usegalileo.ai',logo:gfav('usegalileo.ai'),es:'UI de alta fidelidad desde texto. Exportable a Figma.',en:'High-fidelity UI from text. Exportable to Figma.',tags:['UI design','wireframe','text-to-UI']},
+  {ab:'HH',n:'Hostinger Horizons',url:'hostinger.com/horizons',logo:gfav('hostinger.com'),es:'Apps web completas con deploy y hosting incluido.',en:'Complete web apps with deploy and hosting included.',tags:['zero-code','web app','deploy']},
+  {ab:'DO',n:'Dora AI',url:'dora.run',logo:gfav('dora.run'),es:'Sitios 3D e interactivos con IA sin código.',en:'3D and interactive sites with AI without code.',tags:['3D','interactivo','animaciones']},
+  {ab:'BC',n:'Bubble',url:'bubble.io',logo:gfav('bubble.io'),rating:'recommended',es:'La plataforma no-code más potente. Apps web complejas sin código.',en:'The most powerful no-code platform. Complex web apps without code.',tags:['no-code','full-stack','enterprise']},
+ ]},
+];
+
+const ALL_TOOLS=CATS.flatMap(c=>c.tools.map(t=>({...t,catId:c.id,catC:PAL[c.id].acc})));
+
+/* ════════════════════════════════════════════════════════════════
+   DYNAMIC TOOL COUNTER
+   Regla: si el total de herramientas únicas supera 140 → "140+"
+          si no supera 140 → "130+"
+   Se evalúa contra ALL_TOOLS (deduplicado por nombre) cada vez
+   que el contenido se renderiza, así el número nunca queda
+   desincronizado del repositorio real de datos.
+════════════════════════════════════════════════════════════════ */
+function getToolCountLabel(){
+  const uniqueNames=new Set(ALL_TOOLS.map(t=>t.n));
+  return uniqueNames.size>140 ? '140+' : '130+';
+}
+const TOOL_COUNT_LABEL=getToolCountLabel();
+const FEATURED=['Claude','ChatGPT','Gemini','Midjourney','ElevenLabs','Suno','Cursor','Runway','Canva','Figma','NotebookLM','Gamma','Zapier','HeyGen','FLUX (BFL)','Perplexity','Bolt.new','Windsurf'];
+
+/* ════════════════════════════════════════════════════════════════
+   STATE
+════════════════════════════════════════════════════════════════ */
+let LANG='es';
+
+/* ════════════════════════════════════════════════════════════════
+   HELPERS
+════════════════════════════════════════════════════════════════ */
+function rgb(h){const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return`${r},${g},${b}`}
+function u(key){return UI[key]?.[LANG]||UI[key]?.es||key}
+function td(tool){return tool[LANG]||tool.es||''}
+function tc(cat,field){return cat[LANG]?.[field]||cat.es?.[field]||''}
+
+/* Apply i18n to static data-i18n elements */
+function applyLang(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    if(key==='title_line1'||key==='title_line2'){el.textContent=u(key);return;}
+    el.textContent=u(key)||el.textContent;
+  });
+  document.getElementById('heroSearchInput').placeholder=u('search_ph');
+  document.getElementById('overlaySearch').placeholder=u('search_overlay_ph');
+  // Modal static labels
+  document.getElementById('mBtn').textContent=u('open_tool')+' ↗';
+  // Dynamic tool counter (140+ or 130+ depending on actual data size)
+  const heroCnt=document.getElementById('heroToolCount');
+  if(heroCnt) heroCnt.textContent=TOOL_COUNT_LABEL;
+  const tbCnt=document.getElementById('tbCount');
+  if(tbCnt) tbCnt.textContent=TOOL_COUNT_LABEL+' tools';
+}
+
+/* ════════════════════════════════════════════════════════════════
+   THEME
+════════════════════════════════════════════════════════════════ */
+function toggleTheme(){
+  const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  document.getElementById('themeBtn').textContent=next==='dark'?'🌙':'☀️';
+  localStorage.setItem('dia-theme',next);
+}
+(function initTheme(){
+  const saved=localStorage.getItem('dia-theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.getElementById('themeBtn').textContent=saved==='dark'?'🌙':'☀️';
+})();
+
+/* ════════════════════════════════════════════════════════════════
+   LANGUAGE DROPDOWN
+════════════════════════════════════════════════════════════════ */
+function buildLangMenu(){
+  const dd=document.getElementById('langDropdown');
+  dd.innerHTML='';
+  LANGS.forEach(l=>{
+    const opt=document.createElement('div');
+    opt.className='lang-opt'+(l.code===LANG?' active':'');
+    opt.innerHTML=`<span class="lang-flag">${l.flag}</span><span>${l.label}</span><span class="lang-native">${l.native}</span>`;
+    opt.onclick=()=>setLang(l.code);
+    dd.appendChild(opt);
+  });
+}
+
+function toggleLangMenu(){
+  const dd=document.getElementById('langDropdown');
+  const btn=document.getElementById('langCurrent');
+  const isOpen=dd.classList.contains('open');
+  dd.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+}
+
+function setLang(code){
+  LANG=code;
+  const l=LANGS.find(x=>x.code===code);
+  document.getElementById('langFlag').textContent=l.flag;
+  document.getElementById('langCode').textContent=l.code.toUpperCase().slice(0,3);
+  document.getElementById('langDropdown').classList.remove('open');
+  document.getElementById('langCurrent').classList.remove('open');
+  // RTL for Arabic
+  document.documentElement.setAttribute('dir',code==='ar'?'rtl':'ltr');
+  document.documentElement.setAttribute('lang',code);
+  applyLang();
+  buildLangMenu();
+  // Update topbar cat labels
+  document.querySelectorAll('.tb-cat').forEach(btn2=>{
+    const cid=btn2.id.replace('tbc-','');
+    const lbl=btn2.querySelector('span:last-child');
+    if(lbl&&CAT_SHORT[cid]) lbl.textContent=CAT_SHORT[cid][LANG]||CAT_SHORT[cid].es;
+  });
+  buildHome();
+  // Re-render cat view if open
+  const dirV=document.getElementById('dirView');
+  if(dirV.style.display!=='none'){
+    const active=document.querySelector('.tb-cat.active');
+    if(active){showCat(active.id.replace('tbc-',''));}
+  }
+  localStorage.setItem('dia-lang',code);
+}
+
+// Close dropdown on outside click
+document.addEventListener('click',e=>{
+  if(!document.getElementById('langWrap').contains(e.target)){
+    document.getElementById('langDropdown').classList.remove('open');
+    document.getElementById('langCurrent').classList.remove('open');
+  }
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SWATCH STRIPS
+════════════════════════════════════════════════════════════════ */
+['swatchTop','swatchBot'].forEach(id=>{
+  const el=document.getElementById(id);
+  CATS.forEach(c=>{const s=document.createElement('span');s.style.background=PAL[c.id].acc;el.appendChild(s);});
+});
+
+/* ════════════════════════════════════════════════════════════════
+   TOPBAR CATEGORIES
+════════════════════════════════════════════════════════════════ */
+function buildTopbar(){
+  const el=document.getElementById('tbCats');
+  CATS.forEach(cat=>{
+    const btn=document.createElement('div');
+    btn.className='tb-cat';btn.id='tbc-'+cat.id;
+    const ico=document.createElement('span');ico.className='tb-cat-ico';ico.innerHTML=ICONS[cat.id]||'';
+    const lbl=document.createElement('span');
+    lbl.textContent=CAT_SHORT[cat.id][LANG]||CAT_SHORT[cat.id].es;
+    btn.append(ico,lbl);
+    btn.onclick=()=>showCat(cat.id);
+    el.appendChild(btn);
+  });
+  document.getElementById('tbCount').textContent=TOOL_COUNT_LABEL+' tools';
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LOGO HELPERS
+════════════════════════════════════════════════════════════════ */
+function logoEl(tool,size,catAcc){
+  const wrap=document.createElement('div');
+  wrap.className='tool-logo';wrap.style.cssText=`width:${size}px;height:${size}px`;
+  const img=document.createElement('img');
+  img.src=tool.logo;img.alt=tool.n;img.loading='lazy';
+  img.style.cssText='width:100%;height:100%;object-fit:contain;padding:4px;border-radius:7px';
+  img.onerror=()=>{
+    wrap.innerHTML='';
+    const fb=document.createElement('div');fb.className='tool-logo-fb';
+    const hue=tool.n.split('').reduce((a,c)=>a+c.charCodeAt(0),0)%360;
+    fb.style.cssText=`background:hsl(${hue},58%,42%);border-radius:8px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:${Math.round(size*.33)}px;font-weight:700;color:#fff`;
+    fb.textContent=(tool.ab||tool.n).slice(0,2).toUpperCase();
+    wrap.appendChild(fb);
+  };
+  wrap.appendChild(img);return wrap;
+}
+
+function thumbEl(tool,catAcc){
+  const th=document.createElement('div');th.className='cat-thumb';
+  const img=document.createElement('img');img.src=tool.logo;img.alt=tool.n;img.loading='lazy';
+  img.style.cssText='width:100%;height:100%;object-fit:contain;padding:2px;border-radius:3px';
+  img.onerror=()=>{
+    th.innerHTML='';
+    const fb=document.createElement('div');fb.className='cat-thumb-fb';
+    const hue=tool.n.split('').reduce((a,c)=>a+c.charCodeAt(0),0)%360;
+    fb.style.background=`hsl(${hue},52%,40%)`;
+    fb.textContent=tool.n.slice(0,2).toUpperCase();
+    th.appendChild(fb);
+  };
+  th.appendChild(img);return th;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BUILD HOME
+════════════════════════════════════════════════════════════════ */
+function buildHome(){
+  const grid=document.getElementById('homeGrid');grid.innerHTML='';
+  CATS.forEach((cat,i)=>{
+    const p=PAL[cat.id];
+    const block=document.createElement('div');
+    block.className='cat-block';
+    block.style.cssText=`background:linear-gradient(145deg,${p.acc} 0%,${p.dk} 100%);animation-delay:${i*28}ms`;
+    block.style.setProperty('--cat-border',p.acc);
+    const wm=document.createElement('div');wm.className='cat-block-letter';wm.textContent=cat.id;
+    const ico=document.createElement('div');ico.className='cat-block-icon';ico.innerHTML=ICONS[cat.id]||'';
+    const thumbRow=document.createElement('div');thumbRow.className='cat-block-thumbs';
+    cat.tools.slice(0,5).forEach(t=>thumbRow.appendChild(thumbEl(t,p.acc)));
+    if(cat.tools.length>5){const more=document.createElement('span');more.className='cat-more';more.textContent=`+${cat.tools.length-5}`;thumbRow.appendChild(more);}
+    const bottom=document.createElement('div');
+    const name=document.createElement('div');name.className='cat-block-name';name.textContent=tc(cat,'title');
+    const sub=document.createElement('div');sub.className='cat-block-sub';sub.textContent=tc(cat,'sub');
+    const cnt=document.createElement('span');cnt.className='cat-block-count';cnt.textContent=`${cat.tools.length} ${u('tools_count')}`;
+    bottom.append(name,sub,cnt);
+    block.append(wm,ico,thumbRow,bottom);
+    block.onclick=()=>showCat(cat.id);
+    grid.appendChild(block);
+  });
+
+  // Featured chips — in home and footer
+  ['featScroll_home','footFeatScroll'].forEach(fid=>{
+    // featScroll_home doesn't exist, skip for footer only here
+  });
+  buildFeatured();
+}
+
+function buildFeatured(){
+  // Footer featured
+  const ff=document.getElementById('footFeatScroll');if(!ff)return;
+  ff.innerHTML='';
+  FEATURED.forEach(name=>{
+    const tool=ALL_TOOLS.find(t=>t.n===name);if(!tool)return;
+    const cat=CATS.find(c=>c.id===tool.catId);
+    const chip=document.createElement('div');chip.className='feat-chip';
+    const lw=document.createElement('div');lw.className='feat-chip-logo';
+    const img=document.createElement('img');img.src=tool.logo;img.alt=tool.n;img.loading='lazy';
+    img.style.cssText='width:100%;height:100%;object-fit:contain;padding:2px';
+    img.onerror=()=>{lw.innerHTML='';const fb=document.createElement('div');fb.className='feat-chip-logo-fb';fb.style.background=PAL[cat.id].acc;fb.textContent=tool.n.slice(0,2).toUpperCase();lw.appendChild(fb);};
+    lw.appendChild(img);
+    const nm=document.createElement('div');nm.className='feat-chip-name';nm.textContent=tool.n;
+    chip.append(lw,nm);
+    chip.onclick=()=>openModal(tool,cat);
+    ff.appendChild(chip);
+  });
+  // Search overlay featured
+  const sfg=document.getElementById('featuredSGrid');if(sfg){
+    sfg.innerHTML='';
+    FEATURED.slice(0,12).forEach(name=>{
+      const tool=ALL_TOOLS.find(t=>t.n===name);if(!tool)return;
+      const cat=CATS.find(c=>c.id===tool.catId);
+      sfg.appendChild(buildMiniChip(tool,cat));
+    });
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VIEWS
+════════════════════════════════════════════════════════════════ */
+function showHome(){
+  document.getElementById('homeView').style.display='block';
+  document.getElementById('dirView').style.display='none';
+  document.getElementById('searchView').style.display='none';
+  document.querySelectorAll('.tb-cat').forEach(b=>b.classList.remove('active'));
+  document.getElementById('heroSearchInput').value='';
+  const tbInput=document.getElementById('tbSearchInput');if(tbInput)tbInput.value='';
+  // Topbar → Home state: center search visible, category tabs hidden
+  document.querySelector('.topbar').setAttribute('data-view','home');
+  window.scrollTo(0,0);
+}
+
+function showCat(catId){
+  const cat=CATS.find(c=>c.id===catId);if(!cat)return;
+  document.getElementById('homeView').style.display='none';
+  document.getElementById('searchView').style.display='none';
+  document.getElementById('dirView').style.display='block';
+  document.querySelectorAll('.tb-cat').forEach(b=>b.classList.toggle('active',b.id==='tbc-'+catId));
+  // Topbar → Category/Detail state: tabs visible, center search hidden
+  document.querySelector('.topbar').setAttribute('data-view','category');
+  renderCatPage(cat,cat.tools);
+  window.scrollTo(0,0);
+}
+
+function renderCatPage(cat,tools){
+  const p=PAL[cat.id];
+  const c=document.getElementById('dirContent');c.innerHTML='';
+  const hdr=document.createElement('div');hdr.className='dir-header';
+  const back=document.createElement('button');back.className='dir-back';
+  back.innerHTML=`← <span>${u('back_home')}</span>`;
+  back.onclick=showHome;
+  const catIco=document.createElement('div');catIco.className='dir-cat-icon';
+  catIco.style.background=`linear-gradient(135deg,${p.acc},${p.dk})`;
+  catIco.innerHTML=ICONS[cat.id]||'';
+  const catTxt=document.createElement('div');
+  catTxt.innerHTML=`<div class="dir-cat-name" style="color:${p.acc}">${tc(cat,'title')}</div><div class="dir-cat-sub">${tc(cat,'sub')}</div>`;
+  const badge=document.createElement('div');badge.className='dir-badge';
+  badge.textContent=`${tools.length} ${u('tools_count')}`;
+  const filter=document.createElement('input');filter.type='text';filter.className='dir-filter';
+  filter.placeholder=u('filter_ph');
+  filter.oninput=()=>filterCat(filter.value,cat);
+  hdr.append(back,catIco,catTxt,badge,filter);
+  c.appendChild(hdr);
+  const grid=document.createElement('div');grid.className='tool-grid';grid.id='catGrid-'+cat.id;
+  tools.forEach(t=>grid.appendChild(buildCard(t,cat)));
+  c.appendChild(grid);
+}
+
+function filterCat(q,cat){
+  const ql=q.toLowerCase().trim();
+  const filtered=ql?cat.tools.filter(t=>
+    t.n.toLowerCase().includes(ql)||
+    td(t).toLowerCase().includes(ql)||
+    t.tags.some(x=>x.toLowerCase().includes(ql))
+  ):cat.tools;
+  const grid=document.getElementById('catGrid-'+cat.id);if(!grid)return;
+  grid.innerHTML='';
+  filtered.forEach(t=>grid.appendChild(buildCard(t,cat)));
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CARDS
+════════════════════════════════════════════════════════════════ */
+function buildCard(tool,cat){
+  const p=PAL[cat.id];
+  const card=document.createElement('div');
+  card.className='tool-card';card.tabIndex=0;
+  card.style.setProperty('--cat-border',p.acc);
+  if(tool.rating){
+    const bar=document.createElement('div');bar.className='rating-bar';
+    bar.style.background=tool.rating==='essential'?'var(--brand-yellow)':p.acc;
+    card.appendChild(bar);
+  }
+  const top=document.createElement('div');top.className='tool-card-top';
+  top.appendChild(logoEl(tool,40,p.acc));
+  const info=document.createElement('div');info.style.minWidth='0';
+  info.innerHTML=`<div class="tool-name">${tool.n}</div><div class="tool-domain">${tool.url}</div>`;
+  top.appendChild(info);
+  const desc=document.createElement('div');desc.className='tool-desc';
+  const dt=td(tool);desc.textContent=dt.length>90?dt.slice(0,90)+'…':dt;
+  const tags=document.createElement('div');tags.className='tool-tags';
+  (tool.tags||[]).slice(0,3).forEach(t=>{const s=document.createElement('span');s.className='tool-tag';s.textContent='#'+t;tags.appendChild(s);});
+  const foot=document.createElement('div');foot.className='tool-foot';
+  const link=document.createElement('a');link.className='tool-open';
+  link.href='https://'+tool.url;link.target='_blank';link.rel='noopener';
+  link.style.cssText=`border:1.5px solid rgba(${rgb(p.acc)},.4);color:${p.acc}`;
+  link.textContent=u('open_tool')+' ↗';
+  link.onmouseenter=()=>{link.style.background=p.acc;link.style.color='white'};
+  link.onmouseleave=()=>{link.style.background='';link.style.color=p.acc};
+  link.onclick=e=>e.stopPropagation();
+  const cbadge=document.createElement('span');cbadge.className='tool-cat-badge';
+  cbadge.style.cssText=`background:rgba(${rgb(p.acc)},.12);color:${p.acc}`;
+  cbadge.textContent=`${cat.id} · ${tc(cat,'title').split(' ').slice(0,2).join(' ')}`;
+  foot.append(link,cbadge);
+  card.append(top,desc,tags,foot);
+  card.onclick=()=>openModal(tool,cat);
+  card.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openModal(tool,cat)};
+  return card;
+}
+
+function buildMiniChip(tool,cat){
+  const p=PAL[cat.id];
+  const chip=document.createElement('div');
+  chip.style.cssText=`background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:9px 11px;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;gap:7px`;
+  chip.onmouseenter=()=>{chip.style.borderColor=p.acc};
+  chip.onmouseleave=()=>{chip.style.borderColor='var(--border)'};
+  const row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:7px';
+  const lw=document.createElement('div');lw.className='feat-chip-logo';
+  const img=document.createElement('img');img.src=tool.logo;img.alt=tool.n;img.loading='lazy';
+  img.style.cssText='width:100%;height:100%;object-fit:contain;padding:2px';
+  img.onerror=()=>{lw.innerHTML='';const fb=document.createElement('div');fb.className='feat-chip-logo-fb';fb.style.background=p.acc;fb.textContent=tool.n.slice(0,2).toUpperCase();lw.appendChild(fb);};
+  lw.appendChild(img);
+  const nm=document.createElement('div');nm.style.cssText='font-size:11.5px;font-weight:500;color:var(--text)';nm.textContent=tool.n;
+  row.append(lw,nm);
+  const d=document.createElement('div');d.style.cssText='font-size:9.5px;color:var(--text3);line-height:1.4';
+  d.textContent=td(tool).slice(0,52)+'…';
+  chip.append(row,d);
+  chip.onclick=()=>{closeSearch();openModal(tool,CATS.find(c=>c.id===tool.catId));};
+  return chip;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   MODAL
+════════════════════════════════════════════════════════════════ */
+function openModal(tool,cat){
+  const p=PAL[cat.id];
+  document.getElementById('mAccent').style.background=p.acc;
+  const mLogo=document.getElementById('mLogo');mLogo.innerHTML='';
+  const img=document.createElement('img');img.src=tool.logo;img.alt=tool.n;
+  img.style.cssText='width:100%;height:100%;object-fit:contain;padding:6px';
+  img.onerror=()=>{mLogo.innerHTML='';const fb=document.createElement('div');fb.className='modal-logo-fb';const hue=tool.n.split('').reduce((a,c)=>a+c.charCodeAt(0),0)%360;fb.style.cssText=`background:hsl(${hue},58%,42%);border-radius:12px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff`;fb.textContent=(tool.ab||tool.n.slice(0,2)).toUpperCase();mLogo.appendChild(fb);};
+  mLogo.appendChild(img);
+  document.getElementById('mName').textContent=tool.n;
+  const badge=document.getElementById('mBadge');
+  badge.textContent=tc(cat,'title');
+  badge.style.cssText=`background:rgba(${rgb(p.acc)},.15);color:${p.acc};display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px`;
+  document.getElementById('mDesc').textContent=td(tool);
+  const rRow=document.getElementById('mRatingRow');
+  if(tool.rating){
+    rRow.style.display='flex';
+    document.getElementById('mRatingIco').textContent=tool.rating==='essential'?'⭐':'✦';
+    document.getElementById('mRatingTxt').textContent=tool.rating==='essential'?u('essential_desc'):u('recommended_desc');
+    const rb=document.getElementById('mRatingBadge');
+    rb.textContent=tool.rating==='essential'?u('essential_lbl'):u('recommended_lbl');
+    rb.style.cssText=tool.rating==='essential'
+      ?'background:var(--brand-yellow);color:var(--bg)'
+      :`background:rgba(${rgb(p.acc)},.2);color:${p.acc};border:1px solid ${p.acc}`;
+  } else {rRow.style.display='none';}
+  const mTags=document.getElementById('mTags');mTags.innerHTML='';
+  (tool.tags||[]).forEach(t=>{const s=document.createElement('span');s.className='modal-tag';s.textContent='#'+t;mTags.appendChild(s);});
+  document.getElementById('mUrl').textContent=tool.url;
+  const btn=document.getElementById('mBtn');
+  btn.href='https://'+tool.url;
+  btn.style.cssText=`background:${p.acc};color:white`;
+  btn.textContent=`${u('open_tool')} ${tool.n} →`;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
+
+/* ════════════════════════════════════════════════════════════════
+   SEARCH
+════════════════════════════════════════════════════════════════ */
+function openSearch(){
+  document.getElementById('searchOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('overlaySearch').focus(),50);
+}
+function closeSearch(){
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.getElementById('overlaySearch').value='';
+}
+function runSearch(q){
+  const res=document.getElementById('overlayResults');
+  if(!q.trim()){
+    res.innerHTML=`<div class="sr-lbl">${u('featured_tools')}</div><div class="sr-mini-grid" id="featuredSGrid"></div>`;
+    buildFeatured();return;
+  }
+  const ql=q.toLowerCase();
+  const results=ALL_TOOLS.filter(t=>
+    t.n.toLowerCase().includes(ql)||td(t).toLowerCase().includes(ql)||
+    t.tags.some(x=>x.toLowerCase().includes(ql))||
+    CATS.find(c=>c.id===t.catId)?.[LANG]?.title?.toLowerCase().includes(ql)||
+    CATS.find(c=>c.id===t.catId)?.es?.title?.toLowerCase().includes(ql)
+  );
+  res.innerHTML=`<div class="sr-lbl">${results.length} resultado${results.length!==1?'s':''} · "${q}"</div><div class="sr-mini-grid" id="overlayResGrid"></div>`;
+  const grid=document.getElementById('overlayResGrid');
+  if(!results.length){grid.innerHTML='<div class="sr-empty">Sin resultados</div>';return;}
+  results.slice(0,24).forEach(tool=>{const cat=CATS.find(c=>c.id===tool.catId);grid.appendChild(buildMiniChip(tool,cat));});
+}
+function heroSearch(q){
+  if(!q.trim())return;
+  document.getElementById('homeView').style.display='none';
+  document.getElementById('dirView').style.display='none';
+  document.getElementById('searchView').style.display='block';
+  document.querySelectorAll('.tb-cat').forEach(b=>b.classList.remove('active'));
+  // Topbar stays in Home state (search-centric) — no category context to show
+  document.querySelector('.topbar').setAttribute('data-view','home');
+  const tbInput=document.getElementById('tbSearchInput');if(tbInput&&tbInput.value!==q)tbInput.value=q;
+  const heroInput=document.getElementById('heroSearchInput');if(heroInput&&heroInput.value!==q)heroInput.value=q;
+  const ql=q.toLowerCase();
+  const results=ALL_TOOLS.filter(t=>
+    t.n.toLowerCase().includes(ql)||td(t).toLowerCase().includes(ql)||
+    t.tags.some(x=>x.toLowerCase().includes(ql))
+  );
+  document.getElementById('svTitle').textContent=`"${q}"`;
+  document.getElementById('svCount').textContent=`${results.length} ${u('tools_count')}`;
+  const grid=document.getElementById('svGrid');grid.innerHTML='';
+  if(!results.length){grid.innerHTML='<div class="empty"><span class="empty-ico">🔍</span>Sin resultados</div>';return;}
+  results.forEach(tool=>{const cat=CATS.find(c=>c.id===tool.catId);grid.appendChild(buildCard(tool,cat));});
+  window.scrollTo(0,0);
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeSearch();}});
+
+/* ════════════════════════════════════════════════════════════════
+   INIT
+════════════════════════════════════════════════════════════════ */
+// Restore saved language
+(function initLang(){
+  const saved=localStorage.getItem('dia-lang')||'es';
+  LANG=saved;
+  const l=LANGS.find(x=>x.code===saved)||LANGS[0];
+  document.getElementById('langFlag').textContent=l.flag;
+  document.getElementById('langCode').textContent=l.code.toUpperCase().slice(0,3);
+  if(saved==='ar') document.documentElement.setAttribute('dir','rtl');
+  document.documentElement.setAttribute('lang',saved);
+})();
+
+buildTopbar();
+buildLangMenu();
+buildHome();
+applyLang();
+showHome();
+
+/* ════════════════════════════════════════════════════════════════
+   DEVELOPER NOTES — Mejoras recomendadas para potenciar la guía:
+
+   1. PWA: Añadir manifest.json + Service Worker para instalar como
+      app en iOS, Android y macOS. Solo requiere 2 archivos adicionales.
+
+   2. SEO: Agregar meta description, og:image y structured data
+      (Schema.org SoftwareApplication) para cada herramienta.
+      Mejoraría el ranking en Google enormemente.
+
+   3. Búsqueda avanzada: Implementar filtros por rating (Esencial /
+      Recomendada), por precio (gratuito / de pago) y por tipo de
+      acceso (API disponible / web only / open source).
+
+   4. Persistencia de datos: Guardar herramientas favoritas del usuario
+      en localStorage. Crear una vista "Mis favoritos".
+
+   5. Actualizaciones: Añadir badge "Nuevo" o "Actualizado" a las
+      herramientas con lanzamientos recientes (dato manual en el objeto).
+
+   6. Modo comparación: Permitir seleccionar 2-3 herramientas de la
+      misma categoría y mostrar una tabla comparativa lado a lado.
+
+   7. Newsletter / notificaciones: Integrar un formulario de suscripción
+      (Substack o Mailchimp) para avisar de nuevas incorporaciones.
+
+   8. Analytics: Añadir Umami (privacy-first, gratuito, self-hosted)
+      para saber qué herramientas generan más clicks.
+
+   9. GitHub repo público: Publicar el código en GitHub y aceptar
+      PRs de la comunidad para agregar herramientas. Escala el contenido.
+
+   10. Red social recomendada para remover: Facebook — el alcance
+       orgánico de páginas es casi nulo en 2025 para contenido técnico.
+       
+   11. Red social recomendada para agregar: YouTube — ideal para el
+       perfil de Felipe (producción audiovisual + festivales). Un canal
+       con demos cortas de cada herramienta (30-60 seg) convertiría la
+       guía en un hub de contenido multimedia. Es el formato que mejor
+       explica herramientas visuales como generación de video e imágenes.
+       TikTok también debería considerarse por el algoritmo de descubrimiento.
+
+   12. Dominio sugerido: guia.tools / herramientas.ai / bruni.tools
+       Deploy gratuito: Netlify (drag & drop), Vercel, GitHub Pages.
+════════════════════════════════════════════════════════════════ */
+</script>
+</body>
+</html>
